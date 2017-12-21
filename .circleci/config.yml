@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/build
+    docker:
+      - image: circleci/node:8
+        environment:
+          AWS_REGION: us-east-1
+          NODE_ENV: production
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn eslint
+      - run: yarn prettier -l
+      - run: yarn export
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              sudo apt-get update && sudo apt-get install -y python-pip python-dev
+              sudo pip install awscli
+              yarn sync
+              yarn invalidate
+            fi

@@ -51,7 +51,4 @@ Page.propTypes = {
   children: PropTypes.any.isRequired,
 };
 
-export default connect(
-  () => ({}),
-  () => ({}),
-)(Page);
+export default connect(() => ({}), () => ({}))(Page);

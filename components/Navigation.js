@@ -27,9 +27,7 @@ class Navigation extends Component {
         <WindowSizeListener
           onResize={({ windowWidth: width }) => this.setState({ width })}
         />
-        <div>
-          header
-        </div>
+        <div>header</div>
       </div>
     );
   }

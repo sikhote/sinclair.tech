@@ -3,6 +3,7 @@
 		"description": "Personal website of David Sinclair",
 		"author": "David Sinclair <david@sinclair.tech> (https://sinclair.tech)",
 		"homepage": "sinclair.tech",
+    "aws": "sinclairtech",
 		"version": "0.0.1",
 		"private": true,
 		"scripts": {

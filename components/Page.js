@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Router from 'next/router';
 import Navigation from './Navigation';
 import LoadingBar from './LoadingBar';
-import { bps } from '../lib/styles';
+import { bps, fontSizes, fontFamilies } from '../lib/styles';
 
 class Page extends Component {
   componentDidMount() {
@@ -22,6 +22,11 @@ class Page extends Component {
             .root {
               display: grid;
               height: 100vh;
+
+              :global(*) {
+                ${fontSizes.small}
+                ${fontFamilies.sansSerif}
+              }
 
               @media (max-width: ${bps.medium - 1}px) {
                 grid-template-areas: 'children' 'navigation';

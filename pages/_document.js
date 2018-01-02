@@ -6,7 +6,6 @@ export default class extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>sinclair</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"

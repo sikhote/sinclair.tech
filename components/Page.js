@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Router from 'next/router';
+import Head from 'next/head';
 import Navigation from './Navigation';
 import LoadingBar from './LoadingBar';
 import { bps, fontSizes, fontFamilies } from '../lib/styles';
+import content from '../lib/content';
 
 class Page extends Component {
   componentDidMount() {
@@ -15,8 +17,16 @@ class Page extends Component {
     }
   }
   render() {
+    const { title } = this.props;
+
     return (
       <div className="root">
+        <Head>
+          <title>
+            {content.name}
+            {title ? `${content.divider}${title}` : ''}
+          </title>
+        </Head>
         <style jsx>
           {`
             .root {
@@ -54,6 +64,11 @@ class Page extends Component {
 
 Page.propTypes = {
   children: PropTypes.any.isRequired,
+  title: PropTypes.string,
+};
+
+Page.defaultProps = {
+  title: '',
 };
 
 export default connect(() => ({}), () => ({}))(Page);

@@ -1,6 +1,6 @@
 # David Sinclair
-- [davidsinclair.io](https://davidsinclair.io)
-- [mail@davidsinclair.io](mailto:mail@davidsinclair.io)
+- [sinclair.tech](https://sinclair.tech)
+- [david@sinclair.tech](mailto:david@sinclair.tech)
 - [+1 858 480 1781](tel:+18584801781)
 
 ## Profile
@@ -17,11 +17,12 @@ I am a front end website developer with a passion to learn and contribute. I hav
 - JavaScript, ES6, & jQuery
 - Jest & Nightwatch
 - Linux
+- Next.js
 - Node & Express
 - NPM & Yarn
 - PHP
 - Photoshop & Illustrator
-- React
+- React & React Native
 - Redux
 - Serverless Framework
 - TypeScript

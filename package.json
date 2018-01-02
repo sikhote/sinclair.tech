@@ -3,7 +3,7 @@
 		"description": "Personal website of David Sinclair",
 		"author": "David Sinclair <david@sinclair.tech> (https://sinclair.tech)",
 		"homepage": "sinclair.tech",
-    "aws": "sinclairtech",
+		"aws": "sinclairtech",
 		"version": "0.0.1",
 		"private": true,
 		"scripts": {
@@ -44,6 +44,7 @@
 				"redux-thunk": "2.2.0",
 				"rxjs": "5.4.3",
 				"serverless": "1.25.0",
+				"showdown": "^1.8.6",
 				"styled-jsx": "2.2.1",
 				"styled-jsx-plugin-sass": "0.2.2"
 		}

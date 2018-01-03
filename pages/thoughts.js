@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withRedux from 'next-redux-wrapper';
-import { Link } from 'next-url-prettifier';
+import Link from 'next/link';
 import initStore from '../lib/initStore';
 import Page from '../components/Page';
-import { Router } from '../routes';
 
 class Thoughts extends Component {
   static getInitialProps({ query: { id } }) {
@@ -16,12 +15,23 @@ class Thoughts extends Component {
         Thoughts<br />id: {this.props.id}
         <br />
         <br />
-        <Link route={Router.linkPage('thoughts', { id: 'testtt' })}>
-          <div>Id of testtt</div>
-        </Link>
-        <Link route={Router.linkPage('thoughts', { id: 'hiiiiiiiii' })}>
-          <div>Id of hiiiiiiiii</div>
-        </Link>
+        <ul>
+          <li>
+            <Link href="/thoughts?id=first" as="/thoughts/first">
+              <div>My first blog post</div>
+            </Link>
+          </li>
+          <li>
+            <Link href="/thoughts?id=second" as="/thoughts/second">
+              <div>My second blog post</div>
+            </Link>
+          </li>
+          <li>
+            <Link href="/thoughts?id=last" as="/thoughts/last">
+              <div>My last blog post</div>
+            </Link>
+          </li>
+        </ul>
       </Page>
     );
   }

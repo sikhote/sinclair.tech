@@ -10,6 +10,7 @@ class Thoughts extends Component {
     return { id };
   }
   render() {
+    console.log(this.props);
     return (
       <Page>
         Thoughts<br />id: {this.props.id}

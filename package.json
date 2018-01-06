@@ -7,15 +7,13 @@
 		"version": "0.0.1",
 		"private": true,
 		"scripts": {
-				"dev": "node server.js",
 				"build": "next build",
-				"start": "NODE_ENV=production node server.js",
 				"deploy": "serverless deploy",
 				"destroy": "serverless remove",
 				"eslint": "eslint \"./**/*.js\"",
 				"export": "next build && next export -o build",
 				"invalidate": "serverless invalidate",
-				"next": "next",
+				"next": "node server.js",
 				"prettier": "prettier --write \"./**/*.js\"",
 				"server": "cd build && python -m SimpleHTTPServer",
 				"sync": "serverless sync"

@@ -13,7 +13,7 @@ class Page extends Component {
     const currentPath = window.location.pathname.replace(/\/$/, '');
 
     if (currentPath && Router.route !== currentPath) {
-      // Router.push(currentPath);
+      Router.push(currentPath);
     }
   }
   render() {

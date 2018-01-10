@@ -5036,6 +5036,12 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
+query-parse@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/query-parse/-/query-parse-2.0.0.tgz#e996b28e7ea0343e5f8a2dc24069dac90eb24a43"
+  dependencies:
+    lodash "^4.17.4"
+
 query-string@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-5.0.1.tgz#6e2b86fe0e08aef682ecbe86e85834765402bd88"

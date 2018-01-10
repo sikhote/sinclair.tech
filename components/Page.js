@@ -3,31 +3,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Router from 'next/router';
 import Head from 'next/head';
+import qp from 'query-parse';
 import Navigation from './Navigation';
 import LoadingBar from './LoadingBar';
 import { bps, fontSizes, fontFamilies } from '../lib/styles';
 import content from '../lib/content';
-
-const pathMatch = require('path-match');
-
-const route = pathMatch();
-const match = route('/:page/:alpha');
-const pages = ['projects', 'thoughts'];
+import { match } from '../lib/routing';
 
 class Page extends Component {
   componentDidMount() {
     const currentPath = window.location.pathname.replace(/\/$/, '');
-    console.log('router');
-    console.log(Router.route);
-    console.log('currentPath');
-    console.log(currentPath);
 
     if (currentPath && Router.route !== currentPath) {
       const { page, ...params } = match(currentPath);
-      console.log('params');
-      console.log(params);
-      // make these params a uRL and done!
-      Router.push(`/${page}`, currentPath, params);
+      Router.push(`/${page}?${qp.toString(params)}`, currentPath);
     }
   }
   render() {

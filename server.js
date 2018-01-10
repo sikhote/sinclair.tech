@@ -2,30 +2,32 @@ const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
 const pathMatch = require('path-match');
-const routes = require('./lib/routes');
-// match with many routes??
+
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const route = pathMatch();
-const match = route('/thoughts/:id');
+const match = route('/:page/:alpha');
+const pages = ['projects', 'thoughts'];
 
 app.prepare().then(() => {
   createServer((req, res) => {
     const { pathname, query } = parse(req.url, true);
-    const params = match(pathname);
+    const { page, ...params } = match(pathname);
 
-    if (match(pathname) === false) {
+    if (!pages.includes(page)) {
       handle(req, res);
       return;
     }
-    // assigning `query` into the params means that we still
-    // get the query string passed to our application
-    // i.e. /blog/foo?show-comments=true
-    app.render(req, res, '/thoughts', Object.assign(params, query));
+
+    app.render(req, res, `/`, Object.assign(params, query));
+    // app.render(req, res, `/${page}`, Object.assign(params, query));
   }).listen(port, err => {
-    if (err) throw err;
-    console.log(`> Ready on http://localhost:${port}!!`);
+    if (err) {
+      throw err;
+    }
+
+    console.log(`> Ready on http://localhost:${port}`);
   });
 });

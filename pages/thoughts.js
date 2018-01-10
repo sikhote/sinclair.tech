@@ -6,29 +6,28 @@ import initStore from '../lib/initStore';
 import Page from '../components/Page';
 
 class Thoughts extends Component {
-  static getInitialProps({ query: { id } }) {
-    return { id };
+  static getInitialProps({ query: { alpha } }) {
+    return { alpha };
   }
   render() {
-    console.log(this.props);
     return (
       <Page>
-        Thoughts<br />id: {this.props.id}
+        Thoughts<br />id: {this.props.alpha}
         <br />
         <br />
         <ul>
           <li>
-            <Link href="/thoughts?id=first" as="/thoughts/first">
+            <Link href="/thoughts?alpha=first" as="/thoughts/first">
               <div>My first blog post</div>
             </Link>
           </li>
           <li>
-            <Link href="/thoughts?id=second" as="/thoughts/second">
+            <Link href="/thoughts?alpha=second" as="/thoughts/second">
               <div>My second blog post</div>
             </Link>
           </li>
           <li>
-            <Link href="/thoughts?id=last" as="/thoughts/last">
+            <Link href="/thoughts?alpha=last" as="/thoughts/last">
               <div>My last blog post</div>
             </Link>
           </li>
@@ -39,11 +38,11 @@ class Thoughts extends Component {
 }
 
 Thoughts.propTypes = {
-  id: PropTypes.string,
+  alpha: PropTypes.string,
 };
 
 Thoughts.defaultProps = {
-  id: '',
+  alpha: '',
 };
 
 export default withRedux(initStore, null, null)(Thoughts);

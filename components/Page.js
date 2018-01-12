@@ -12,8 +12,11 @@ import content from '../lib/content';
 import { match } from '../lib/routing';
 
 const isWeb = typeof window !== 'undefined';
-const getCurrentPath = () =>
-  isWeb ? window.location.pathname.replace(/\/$/, '') : '';
+const getCurrentPath = () => {
+  const path = isWeb && window.location.pathname.replace(/\/$/, '');
+  return isWeb ? path || '/' : '';
+};
+const getPage = currentPath => currentPath.replace(/^\//, '');
 
 // prettier-ignore
 const style = css`
@@ -43,19 +46,16 @@ const style = css`
 class Page extends Component {
   componentDidMount() {
     const currentPath = getCurrentPath();
+    const { page = getPage(currentPath), ...params } = match(currentPath);
 
-    if (currentPath && Router.route !== currentPath) {
-      const { page, ...params } = match(currentPath);
+    if (Router.route !== `/${page}`) {
       Router.push(`/${page}?${qp.toString(params)}`, currentPath);
     }
   }
   render() {
     const { title } = this.props;
     const currentPath = getCurrentPath();
-    console.log('--------------------');
-    console.log(getCurrentPath());
-    console.log(isWeb && Router.route);
-
+    const { page = getPage(currentPath) } = match(currentPath);
 
     return (
       <div className="root">
@@ -71,7 +71,7 @@ class Page extends Component {
           <Navigation />
         </div>
         <div style={{ gridArea: 'children' }}>
-          {isWeb && Router.route === currentPath && this.props.children}
+          {isWeb && Router.route === `/${page}` && this.props.children}
         </div>
       </div>
     );

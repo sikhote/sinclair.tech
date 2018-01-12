@@ -18,8 +18,7 @@ app.prepare().then(() => {
       return;
     }
 
-    app.render(req, res, `/`, Object.assign(params, query));
-    // app.render(req, res, `/${page}`, Object.assign(params, query));
+    app.render(req, res, `/${page}`, Object.assign(params, query));
   }).listen(port, err => {
     if (err) {
       throw err;

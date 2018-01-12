@@ -621,7 +621,7 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-inline-import@^2.0.6:
+babel-plugin-inline-import@2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/babel-plugin-inline-import/-/babel-plugin-inline-import-2.0.6.tgz#8a3c179561b503bf4af319f3cad435e6b7b2863c"
   dependencies:
@@ -2442,7 +2442,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express@^4.16.2:
+express@4.16.2:
   version "4.16.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
   dependencies:
@@ -4806,7 +4806,7 @@ path-loader@^1.0.2:
     native-promise-only "^0.8.1"
     superagent "^3.6.3"
 
-path-match@1.2.4, path-match@^1.2.4:
+path-match@1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/path-match/-/path-match-1.2.4.tgz#a62747f3c7e0c2514762697f24443585b09100ea"
   dependencies:
@@ -5036,7 +5036,7 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-query-parse@^2.0.0:
+query-parse@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/query-parse/-/query-parse-2.0.0.tgz#e996b28e7ea0343e5f8a2dc24069dac90eb24a43"
   dependencies:
@@ -5748,7 +5748,7 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
-showdown@^1.8.6:
+showdown@1.8.6:
   version "1.8.6"
   resolved "https://registry.yarnpkg.com/showdown/-/showdown-1.8.6.tgz#91ea4ee3b7a5448aaca6820a4e27e690c6ad771c"
   dependencies:

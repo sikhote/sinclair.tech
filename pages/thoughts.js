@@ -11,7 +11,7 @@ class Thoughts extends Component {
   }
   render() {
     return (
-      <Page>
+      <Page title="Thoughts">
         Thoughts<br />id: {this.props.alpha}
         <br />
         <br />

@@ -13,23 +13,15 @@ const style = css`
   }
 `;
 
-const Item = ({ id }) => {
-  if (!id) {
-    return <div>Could not find it!</div>;
-  }
-
-  console.log(id);
-
-  return (
-    <div className="root">
-      <style jsx>{style}</style>
-      <div>Helllo {id}</div>
-    </div>
-  );
-};
+const Item = ({ item }) => (
+  <div className="root">
+    <style jsx>{style}</style>
+    <div>Helllo {item.title}</div>
+  </div>
+);
 
 Item.propTypes = {
-  id: PropTypes.string.isRequired,
+  item: PropTypes.object.isRequired,
 };
 
 export default Item;

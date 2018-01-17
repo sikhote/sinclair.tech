@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import withRedux from 'next-redux-wrapper';
+import { withRouter } from 'next/router';
 import css from 'styled-jsx/css';
+import Error from 'next/error';
+import initStore from '../lib/initStore';
+import Page from '../components/Page';
 import { colors } from '../lib/styles';
 import Item from './Item';
+import content from '../lib/content';
 
 const style = css`
   .root {
@@ -14,20 +20,41 @@ const style = css`
   }
 `;
 
-const Feed = ({ id }) => (
-  <div className="root">
-    <style jsx>{style}</style>
-    {id && <Item id={id} />}
-    {!id && <div>No id</div>}
-  </div>
-);
+class Feed extends Component {
+  static getInitialProps({ query: { alpha } }) {
+    return { alpha };
+  }
+  render() {
+    const { alpha: id, router } = this.props;
+    const page = router.pathname.replace(/\//g, '');
+    const item = id ? content.feed.find(i => i.id === id) : null;
+    const title =
+      content.pages[page].title +
+      (item ? `${content.divider}${item.title}` : '');
+
+    if (id && !item) {
+      return <Error statusCode={404} />;
+    }
+
+    return (
+      <Page title={title}>
+        <style jsx>{style}</style>
+        <div className="root">
+          {id && <Item item={item} />}
+          {!id && <div>No id</div>}
+        </div>
+      </Page>
+    );
+  }
+}
 
 Feed.propTypes = {
-  id: PropTypes.string,
+  alpha: PropTypes.string,
+  router: PropTypes.object.isRequired,
 };
 
 Feed.defaultProps = {
-  id: '',
+  alpha: '',
 };
 
-export default Feed;
+export default withRouter(withRedux(initStore, null, null)(Feed));

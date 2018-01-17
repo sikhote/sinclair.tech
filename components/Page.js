@@ -53,7 +53,7 @@ class Page extends Component {
     }
   }
   render() {
-    const { title } = this.props;
+    const { title, children } = this.props;
     const currentPath = getCurrentPath();
     const { page = getPage(currentPath) } = match(currentPath);
 
@@ -71,7 +71,7 @@ class Page extends Component {
           <Navigation />
         </div>
         <div style={{ gridArea: 'children' }}>
-          {isWeb && Router.route === `/${page}` && this.props.children}
+          {isWeb && Router.route === `/${page}` && children}
         </div>
       </div>
     );

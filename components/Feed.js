@@ -41,27 +41,30 @@ const Feed = ({ alpha: id, router }) => {
             {content.feed
               .filter(({ type }) => `${type}s` === page)
               .map(({ id, type, title, description }) => (
-                <div key={id}>
-                  <Link href={`/${type}s/${id}`}>
-                    <div>
-                      {type === 'project' && (
-                        <div
-                          style={{
-                            width: 50,
-                            height: 50,
-                            backgroundImage: `url(/static/images/projects/${
-                              id
-                            }-1.jpg)`,
-                          }}
-                        />
-                      )}
-                      <div>{title}</div>
-                      {type === 'thought' && (
-                        <div className="description">{description}</div>
-                      )}
-                    </div>
-                  </Link>
-                </div>
+                <a
+                  key={id}
+                  href={`/${type}s/${id}`}
+                  onClick={e => {
+                    e.preventDefault();
+                    router.push(`/${type}s?alpha=${id}`, `/${type}s/${id}`);
+                  }}
+                >
+                  {type === 'project' && (
+                    <div
+                      style={{
+                        width: 50,
+                        height: 50,
+                        backgroundImage: `url(/static/images/projects/${
+                          id
+                        }-1.jpg)`,
+                      }}
+                    />
+                  )}
+                  <div>{title}</div>
+                  {type === 'thought' && (
+                    <div className="description">{description}</div>
+                  )}
+                </a>
               ))}
           </div>
         )}

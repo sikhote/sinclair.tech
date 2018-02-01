@@ -10,7 +10,7 @@ const converter = new showdown.Converter();
 
 const Resume = () => (
   <Page title={content.pages.resume.title}>
-    <div dangerouslySetInnerHTML={{__html: converter.makeHtml(resume)}} />
+    <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(resume) }} />
   </Page>
 );
 

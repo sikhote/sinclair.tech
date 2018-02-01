@@ -48,7 +48,9 @@ const style = css`
 `;
 
 const LoadingBar = () => (
-  <style jsx global>{style}</style>
+  <style jsx global>
+    {style}
+  </style>
 );
 
 export default LoadingBar;

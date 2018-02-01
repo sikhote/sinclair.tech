@@ -28,8 +28,8 @@ class Item extends Component {
     const converter = new showdown.Converter();
 
     fetch(`/static/text/${type}s/${id}.md`)
-      .then((response) => response.text())
-      .then((text) => this.setState({ content: converter.makeHtml(text) }));
+      .then(response => response.text())
+      .then(text => this.setState({ content: converter.makeHtml(text) }));
   }
   render() {
     const { item: { id, type, title, date, images } } = this.props;

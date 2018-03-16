@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withRedux from 'next-redux-wrapper';
 import { withRouter } from 'next/router';
-import Link from 'next/link';
 import css from 'styled-jsx/css';
 import Error from 'next/error';
-import initStore from '../lib/initStore';
 import Page from '../components/Page';
 import { colors } from '../lib/styles';
 import Item from './Item';
@@ -84,4 +81,4 @@ Feed.defaultProps = {
   alpha: '',
 };
 
-export default withRouter(withRedux(initStore, null, null)(Feed));
+export default withRouter(Feed);

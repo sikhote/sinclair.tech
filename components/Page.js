@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Router from 'next/router';
 import Head from 'next/head';
 import qp from 'query-parse';
@@ -88,4 +87,4 @@ Page.defaultProps = {
   title: '',
 };
 
-export default connect(() => ({}), () => ({}))(Page);
+export default Page;

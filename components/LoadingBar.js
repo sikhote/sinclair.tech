@@ -2,7 +2,7 @@ import React from 'react';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import css from 'styled-jsx/css';
-import { colors } from '../lib/styles';
+import { colors } from '../styles/base';
 
 const startDelay = 1000;
 let timer = null;

@@ -1,6 +1,6 @@
 import React from 'react';
 import css from 'styled-jsx/css';
-import { colors } from '../lib/styles';
+import { colors } from '../styles/base';
 import ActiveLink from './ActiveLink';
 
 const style = css`

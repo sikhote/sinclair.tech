@@ -4,7 +4,7 @@ import { withRouter } from 'next/router';
 import css from 'styled-jsx/css';
 import Error from 'next/error';
 import Page from '../components/Page';
-import { colors } from '../lib/styles';
+import { colors } from '../styles/base';
 import Item from './Item';
 import content from '../lib/content';
 

@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import Router from 'next/router';
 import Head from 'next/head';
 import qp from 'query-parse';
-import css from 'styled-jsx/css';
 import Navigation from './Navigation';
 import LoadingBar from './LoadingBar';
-import { bps, fontSizes, fontFamilies } from '../lib/styles';
 import content from '../lib/content';
 import { match } from '../lib/routing';
+import style from '../styles/page';
 
 const isWeb = typeof window !== 'undefined';
 const getCurrentPath = () => {
@@ -16,31 +15,6 @@ const getCurrentPath = () => {
   return isWeb ? path || '/' : '';
 };
 const getPage = currentPath => currentPath.replace(/^\//, '');
-
-// prettier-ignore
-const style = css`
-  .root {
-    display: grid;
-    height: 100vh;
-
-    :global(*) {
-      ${fontSizes.small}
-      ${fontFamilies.sansSerif}
-    }
-
-    @media (max-width: ${bps.medium - 1}px) {
-      grid-template-areas: 'children' 'navigation';
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 55px;
-    }
-
-    @media (min-width: ${bps.medium}px) {
-      grid-template-areas: 'navigation children';
-      grid-template-columns: 200px 1fr;
-      grid-template-rows: 1fr;
-    }
-  }
-`;
 
 class Page extends Component {
   componentDidMount() {

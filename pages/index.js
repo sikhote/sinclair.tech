@@ -8,6 +8,9 @@ const converter = new showdown.Converter();
 
 export default () => (
   <Page title={content.pages.about.title}>
-    <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(about) }} />
+    <div
+      className="content"
+      dangerouslySetInnerHTML={{ __html: converter.makeHtml(about) }}
+    />
   </Page>
 );

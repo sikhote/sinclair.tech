@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 import showdown from 'showdown';
 import css from 'styled-jsx/css';
-import { colors } from '../lib/styles';
+import { colors } from '../styles/base';
 
 const style = css`
   .root {

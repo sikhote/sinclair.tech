@@ -18,13 +18,17 @@ export const spacing = {
 export const colors = {
   primary: '#0ca678',
   text: '#343A42',
+  divider: '#343A42',
+  codeBg: '#c3fae8'
 };
 
 export const fontSizes = {
+  code: 'font-size: 14px;',
   small: 'font-size: 16px;',
   medium: 'font-size: 20px;',
   large: 'font-size: 24px;',
-  larger: 'font-size: 28px;'
+  larger: 'font-size: 28px;',
+  huge: 'font-size: 32px;'
 };
 
 export const fontFamilies = {

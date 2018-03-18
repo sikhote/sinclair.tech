@@ -7,7 +7,8 @@ import Navigation from './Navigation';
 import LoadingBar from './LoadingBar';
 import content from '../lib/content';
 import { match } from '../lib/routing';
-import style from '../styles/page';
+import pageStyle from '../styles/page';
+import globalStyle from '../styles/global';
 
 const isWeb = typeof window !== 'undefined';
 const getCurrentPath = () => {
@@ -38,14 +39,11 @@ class Page extends Component {
             {title ? `${content.divider}${title}` : ''}
           </title>
         </Head>
-        <style jsx>{style}</style>
+        <style jsx global>{globalStyle}</style>
+        <style jsx>{pageStyle}</style>
         <LoadingBar />
-        <div style={{ gridArea: 'navigation' }}>
-          <Navigation />
-        </div>
-        <div style={{ gridArea: 'children' }}>
-          {isWeb && Router.route === `/${page}` && children}
-        </div>
+        <Navigation />
+        {isWeb && Router.route === `/${page}` && children}
       </div>
     );
   }

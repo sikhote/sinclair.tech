@@ -2,18 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 import showdown from 'showdown';
-import css from 'styled-jsx/css';
-import { colors } from '../styles/base';
-
-const style = css`
-  .root {
-    height: 100%;
-
-    :global(div) {
-      color: ${colors.text};
-    }
-  }
-`;
 
 class Item extends Component {
   constructor(props) {
@@ -37,17 +25,21 @@ class Item extends Component {
 
     return (
       <div className="root">
-        <style jsx>{style}</style>
         <div>
-          <div>
-            <Highlight innerHTML>{content}</Highlight>
-            {type && (
-              <div>
-                {type === 'project' ? 'Added ' : 'Published '}
-                on {date} by David Sinclair
-              </div>
-            )}
-          </div>
+          {content && (
+            <div>
+              <h1>{title}</h1>
+              <Highlight innerHTML className="content">
+                {content}
+              </Highlight>
+              {type && (
+                <footer>
+                  {type === 'project' ? 'Added ' : 'Published '}
+                  on {date} by David Sinclair
+                </footer>
+              )}
+            </div>
+          )}
           {type === 'project' && (
             <div>
               {Array(images)

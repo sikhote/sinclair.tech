@@ -6,12 +6,31 @@ export default css`
   .root {
     width: 100%;
 
-    @media (max-width: ${bps.medium - 1}px) {
+    .project {
+      display: grid;
+      grid-gap: ${spacing.huge}px;
+      grid-template-rows: 1fr;
 
+      .project-image {
+        width: 100%;
+        display: block;
+
+        &:not(:last-child) {
+          padding-bottom: ${spacing.larger}px;
+        }
+      }
+    }
+
+    @media (max-width: ${bps.medium - 1}px) {
+      .project {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (min-width: ${bps.medium}px) {
-
+      .project {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
 `;

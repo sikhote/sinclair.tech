@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 import showdown from 'showdown';
-import style from '../styles/feed'
+import style from '../styles/item'
 
 class Item extends Component {
   constructor(props) {
@@ -27,8 +27,8 @@ class Item extends Component {
     return (
       <div className="root">
         <style jsx>{style}</style>
-        <div>
-          {content && (
+        {content && (
+          <div className={type || ''}>
             <div>
               <h1>{title}</h1>
               <Highlight innerHTML className="content">
@@ -41,22 +41,22 @@ class Item extends Component {
                 </footer>
               )}
             </div>
-          )}
-          {type === 'project' && (
-            <div>
-              {Array(images)
-                .fill(0)
-                .map((a, i) => (
-                  <img
-                    key={`${id}-${i + 1}`}
-                    alt={title}
-                    src={`/static/images/projects/${id}-${i + 1}.jpg`}
-                    style={{ width: 50, height: 50 }}
-                  />
-                ))}
-            </div>
-          )}
-        </div>
+            {type === 'project' && (
+              <div>
+                {Array(images)
+                  .fill(0)
+                  .map((a, i) => (
+                    <img
+                      className="project-image"
+                      key={`${id}-${i + 1}`}
+                      alt={title}
+                      src={`/static/images/projects/${id}-${i + 1}.jpg`}
+                    />
+                  ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     );
   }

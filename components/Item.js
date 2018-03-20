@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 import showdown from 'showdown';
+import style from '../styles/feed'
 
 class Item extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class Item extends Component {
 
     return (
       <div className="root">
+        <style jsx>{style}</style>
         <div>
           {content && (
             <div>

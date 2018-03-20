@@ -1,22 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
-import css from 'styled-jsx/css';
 import Error from 'next/error';
 import Page from '../components/Page';
-import { colors } from '../styles/base';
 import Item from './Item';
 import content from '../lib/content';
-
-const style = css`
-  .root {
-    height: 100%;
-
-    :global(div) {
-      color: ${colors.text};
-    }
-  }
-`;
+import style from '../styles/feed'
 
 const Feed = ({ alpha: id, router }) => {
   const page = router.pathname.replace(/\//g, '');
@@ -34,7 +23,7 @@ const Feed = ({ alpha: id, router }) => {
       <div className="root">
         {id && <Item item={item} />}
         {!id && (
-          <div>
+          <div className={`items ${page}`}>
             {content.feed
               .filter(({ type }) => `${type}s` === page)
               .map(({ id, type, title, description }) => (
@@ -48,18 +37,17 @@ const Feed = ({ alpha: id, router }) => {
                 >
                   {type === 'project' && (
                     <div
+                      className="image"
                       style={{
-                        width: 50,
-                        height: 50,
                         backgroundImage: `url(/static/images/projects/${
                           id
                         }-1.jpg)`,
                       }}
                     />
                   )}
-                  <div>{title}</div>
+                  <div className="title">{title}</div>
                   {type === 'thought' && (
-                    <div className="description">{description}</div>
+                    <div>{description}</div>
                   )}
                 </a>
               ))}

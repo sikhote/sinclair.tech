@@ -12,7 +12,7 @@ Claudia is a tool for automating steps that create AWS API Gateways and linked L
 - A CloudFormation Stack can be managed all at once
 - CloudFormation goes far beyond linking only API Gateways and Lambda functions
 
-[![AWS CloudFormation](/assets/images/thoughts/aws-cloudformation.jpg)](https://www.youtube.com/watch?v=Omppm_YUG2g)
+[![AWS CloudFormation](/static/images/thoughts/aws-cloudformation.jpg)](https://www.youtube.com/watch?v=Omppm_YUG2g)
 
 Overall, I thought Claudia.JS was great, as it saved a lot of time clicking through the AWS console to create an endpoint. Claudia's API Builder package automatically created an API, a "hello" resource, a GET method, and a Lambda function.
 

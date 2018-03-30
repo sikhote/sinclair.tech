@@ -29,7 +29,7 @@ export const fontSizes = {
   medium: 'font-size: 20px;',
   large: 'font-size: 24px;',
   larger: 'font-size: 28px;',
-  huge: 'font-size: 32px;',
+  huge: 'font-size: 30px;',
   hugest: 'font-size: 36px;'
 };
 

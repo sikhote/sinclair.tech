@@ -70,7 +70,7 @@ curl https://*********d.execute-api.us-west-2.amazonaws.com/latest/hello/Human?l
 ## What Create Does
 After the "create" command, Claudia.JS created a Lambda function, a new API Gateway, a new role, and all with the proper connections. Because Claudia.JS does not use CloudFormation, AWS cannot manage all of these resources at once, but within your project folder a `claudia.json` file was created. This JSON file allows Claudia.JS to go back and update or destroy the entire ecosystem it created. Verifying this in the AWS console reveals how much work Claudia.JS has completed automatically:
 
-![AWS Console](/assets/images/thoughts/aws-console.jpg)
+![AWS Console](/static/images/thoughts/aws-console.jpg)
 
 The API responds with proper success and error codes, thanks to Claudia.JS. The API building tool within Claudia.JS should be very familiar to Node.js API development—the endpoint is defined and the function follows. This example can be expanded with the standards HTTP methods and CRUD interactions with DynamoDB.
 

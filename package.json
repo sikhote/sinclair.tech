@@ -1,5 +1,5 @@
 {
-		"name": "sinclair",
+		"name": "sinclairtech",
 		"description": "Personal website of David Sinclair",
 		"author": "David Sinclair <david@sinclair.tech> (https://sinclair.tech)",
 		"homepage": "sinclair.tech",
@@ -28,7 +28,7 @@
 				"eslint-plugin-jsx-a11y": "6.0.2",
 				"eslint-plugin-react": "7.5.1",
 				"moment": "2.19.3",
-				"next": "^5.0.0",
+				"next": "5.1.0",
 				"node-sass": "4.7.2",
 				"nprogress": "0.2.0",
 				"path-match": "1.2.4",

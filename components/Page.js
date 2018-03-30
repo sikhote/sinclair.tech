@@ -27,12 +27,12 @@ class Page extends Component {
     }
   }
   render() {
-    const { title, children } = this.props;
+    const { title, children, className } = this.props;
     const currentPath = getCurrentPath();
     const { page = getPage(currentPath) } = match(currentPath);
 
     return (
-      <div className="root">
+      <div className={className}>
         <Head>
           <title>
             {content.name}
@@ -52,11 +52,13 @@ class Page extends Component {
 Page.propTypes = {
   children: PropTypes.any,
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Page.defaultProps = {
   children: null,
   title: '',
+  className: 'root',
 };
 
 export default Page;

@@ -69,10 +69,9 @@ The Dynamo GET 10 starts off high at 500ms and did not get much better. For the 
 
 For the Dynamo POST test we see varying results. Having 10 concurrent users was not a problem and was quick to moderate to respond. When we ramped up to 100 users, it looked like Lambda took a second to wake up, then kept-up very well for the most part, producing 90% of responses under 200ms. There is more testing to be done here, because it seems sometimes Lambda takes way too long to ramp up or something else is happening. It could be a matter of increasing our function timeout of 6s, but having to set it to anything higher seems off.
 
-## CDP Benefits
+## Conclusion
 Without further investigation, I would be hesitant to give certain recommendations about API Gateway and Lambda services. What I would suggest, is making sure timeouts, both in the Lambda function and the client function, are set high. It seems like the services will ramp up nicely to whatever needs you have, but sometimes that process takes a while.
 
-## Conclusion
 Using API Gateway and Lambda at scale is interesting, testing it even more so. I realize that the testing method of ramping up to X amount of users within only 5 seconds might be a tough challenge for the service. Perhaps it would do better if that test was over a minute or two. Also, I think the Lambda concurrent users limit could be bumped up even higher to 5000 or more. Hopefully this is a decent place to start for more testing and understanding of how Lambda responds to scale.
 
 I have stopped this investigation without all the answers because it went a big longer than a standard investigation and I'm not sure how much more time we would like to invest in it.

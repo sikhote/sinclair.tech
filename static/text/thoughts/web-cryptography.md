@@ -10,7 +10,7 @@ It looks like the details are in specific implementations of the methods listed 
 
 Here is a chart to see which algorithms and methods are supported to work together:
 
-![Cryptography Chart](/assets/images/thoughts/cryptography-chart.jpg)
+![Cryptography Chart](/static/images/thoughts/cryptography-chart.jpg)
 
 ## Use Cases
 I came across the following [W3 Use Cases](https://www.w3.org/TR/webcrypto-usecases/) that outlines some scenarios where the API is useful. To summarize the suggested use cases:
@@ -32,7 +32,7 @@ According to [caniuse.com](http://caniuse.com/#search=Web%20Crypto), support for
 
 As far which functions are available, [this live table](https://diafygi.github.io/webcrypto-examples/) shows what your browser is able to handle. Here is it running Safari at the time of writing:
 
-![Cryptography Safari](/assets/images/thoughts/cryptography-safari.jpg)
+![Cryptography Safari](/static/images/thoughts/cryptography-safari.jpg)
 
 There is also a [test report](https://rawgit.com/w3c/webcrypto/master/PR-test-report.html) from W3 about supported algorithms, but it does not cover all browsers and it may not be updated very often.
 

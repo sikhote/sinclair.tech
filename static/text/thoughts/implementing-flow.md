@@ -68,7 +68,7 @@ I ran `flow check --all`, which works as you might expect, and my computer's fan
 
 It worked, kind of...I got 423 errors:
 
-![Flow Errors](/assets/images/thoughts/flow-errors.jpg)
+![Flow Errors](/static/images/thoughts/flow-errors.jpg)
 
 
 Taking a closer look at these errors reveals most of them are not actually useful—Flow is not looking through `node_modules` (due to the ignore). Flow is completely ignoring these files, rather than slightly ignoring them...hmmm. So, I hoped it would work to run `flow check` with this `.flowconfig`:

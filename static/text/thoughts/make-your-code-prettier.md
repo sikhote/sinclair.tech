@@ -171,7 +171,7 @@ __48 changed files with 594 additions and 538 deletions.__
 
 What did it change? Was it useful? Well, it brought a lot of consistency to the code. Check out a portion of a `git diff` that shows some common changes:
 
-![Prettier Diff](/assets/images/thoughts/prettier-diff.jpg)
+![Prettier Diff](/static/images/thoughts/prettier-diff.jpg)
 
 These are not ground-breaking changes, but subtle differences. ESLint could have detected the formatting inconsistencies, but this project did not have all ESLint rules applied. Compared to ESLint, which does not assume anything, Prettier is quite the opposite—it has opinions and it changed our files!
 

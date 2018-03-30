@@ -13,7 +13,7 @@ react-native run-ios
 ```
 A console should pop-up along with the iOS simulator and your Awesome Project! What just happened? We used the `react-native init` command to generate a boilerplate. If we look into the contents of our newly created files, you can find `index.android.js` and `index.ios.js` files—as you might have guessed, this is where it all starts (depending on the platform).
 
-![Awesome Project](/assets/images/thoughts/awesome-project.jpg)
+![Awesome Project](/static/images/thoughts/awesome-project.jpg)
 
 A basic React Native app looks like this:
 ```

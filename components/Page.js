@@ -1,54 +1,66 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Router from 'next/router';
+import Head from 'next/head';
+import qp from 'query-parse';
 import Navigation from './Navigation';
 import LoadingBar from './LoadingBar';
-import { bps } from '../lib/styles';
+import content from '../lib/content';
+import { match } from '../lib/routing';
+import pageStyle from '../styles/page';
+import globalStyle from '../styles/global';
+
+const isWeb = typeof window !== 'undefined';
+const getCurrentPath = () => {
+  const path = isWeb && window.location.pathname.replace(/\/$/, '');
+  return isWeb ? path || '/' : '';
+};
+const getPage = currentPath => currentPath.replace(/^\//, '');
 
 class Page extends Component {
   componentDidMount() {
-    const currentPath = window.location.pathname.replace(/\/$/, '');
+    const currentPath = getCurrentPath();
+    const { page = getPage(currentPath), ...params } = match(currentPath);
 
-    if (currentPath && Router.route !== currentPath) {
-      Router.push(currentPath);
+    if (Router.route !== `/${page}`) {
+      Router.push(`/${page}?${qp.toString(params)}`, currentPath);
     }
   }
   render() {
+    const { title, children, className } = this.props;
+    const currentPath = getCurrentPath();
+    const { page = getPage(currentPath) } = match(currentPath);
+
     return (
-      <div className="root">
-        <style jsx>
-          {`
-            .root {
-              display: grid;
-              height: 100vh;
-
-              @media (max-width: ${bps.medium - 1}px) {
-                grid-template-areas: 'children' 'navigation';
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 55px;
-              }
-
-              @media (min-width: ${bps.medium}px) {
-                grid-template-areas: 'navigation children';
-                grid-template-columns: 200px 1fr;
-                grid-template-rows: 1fr;
-              }
-            }
-          `}
+      <div className={className}>
+        <Head>
+          <title>
+            {content.name}
+            {title ? `${content.divider}${title}` : ''}
+          </title>
+        </Head>
+        <style jsx global>
+          {globalStyle}
         </style>
+        <style jsx>{pageStyle}</style>
         <LoadingBar />
-        <div style={{ gridArea: 'navigation' }}>
-          <Navigation />
-        </div>
-        <div style={{ gridArea: 'children' }}>{this.props.children}</div>
+        <Navigation />
+        {isWeb && Router.route === `/${page}` && children}
       </div>
     );
   }
 }
 
 Page.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
+  title: PropTypes.string,
+  className: PropTypes.string,
 };
 
-export default connect(() => ({}), () => ({}))(Page);
+Page.defaultProps = {
+  children: null,
+  title: '',
+  className: 'root',
+};
+
+export default Page;

@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 import { lighten } from 'polished';
-import { bps, colors, spacing } from './base';
+import { colors, spacing } from './base';
 
 // prettier-ignore
 export default css`

@@ -9,6 +9,7 @@ I am a front end website developer with a passion to learn and contribute. I hav
 ## Knowledge
 - Amazon Web Services
 - Angular 1.x
+- Babylon.js
 - Backbone
 - Bootstrap
 - CSS, Sass, & Less
@@ -25,7 +26,7 @@ I am a front end website developer with a passion to learn and contribute. I hav
 - React & React Native
 - Redux
 - Serverless Framework
-- TypeScript
+- TypeScript and Flow
 - Webpack
 
 ## Education
@@ -37,7 +38,9 @@ I am a front end website developer with a passion to learn and contribute. I hav
 
 ### Contract JavaScript Engineer at [Sony Electronics](http://www.sony.com/en_us/SCA)
 #### 2016–Present · Rancho Bernardo, CA
-- Fixed bugs and helped maintain [Play Memories Online](https://playmemoriesonline.com)
+- Helped develop front end and back end features for a content manager that customers work with directly to produce phone applications used by college students and large events. The UI was built with Webpack, React, Redux. The APIs utilized AWS Lamda, Cognito, Dynamo, CloudWatch, and Google Firebase.
+- Helped build and ship an interactive WebGL game for the 2018 SXSW event in Texas, in a very short timespan. The game imported 3D models, rendered them on a projector, allowed players to interact with the models, had sound effects, and turned out to be a huge success. Babylon.js, Webpack, React, Electron, and Node technologies allowed the game to work on any computer.
+- Fixed bugs and helped maintain [Play Memories Online](https://playmemoriesonline.com).
 - Prototyped a working Tennis Challenge mobile application in three weeks with more functionality than requested. Prototype was used for a successful live demonstration to a tennis school in Japan. Application was built using React, Redux, AWS, Webpack, and Express.
 - Maintained a widely used, company built, Yeoman generator boilerplate. Added functionality in free time to allow TypeScript 2, Webpack, and Yarn as options within the generator. The generator also utilized React, Redux, Express, Sass, Less, and Browserify. Fixed all errors within generator for open source release.
 - Researched and presented front and back end technologies for implementing into future projects. Topics included: AWS Lambda scaling, the Serverless Framework and alternatives, React Native integration, React International, and Fela CSS.

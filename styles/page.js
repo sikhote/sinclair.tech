@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import { bps, spacing } from './base';
+import { spacing } from './base';
 
 // prettier-ignore
 export default css`
@@ -10,13 +10,5 @@ export default css`
     padding-bottom: ${spacing.larger}px;
     padding-left: ${spacing.larger}px;
     padding-right: ${spacing.larger}px;
-
-    @media (max-width: ${bps.medium - 1}px) {
-
-    }
-
-    @media (min-width: ${bps.medium}px) {
-
-    }
   }
 `;

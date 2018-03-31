@@ -39,8 +39,9 @@ const Feed = ({ alpha: id, router }) => {
                     <div
                       className="image"
                       style={{
+                        // prettier-ignore
                         backgroundImage:
-                          `url(/static/images/projects/${id}-1.jpg)`,
+                          `url(/static/images/projects/${id}-1.jpg)`
                       }}
                     />
                   )}

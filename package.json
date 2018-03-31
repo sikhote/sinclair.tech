@@ -33,7 +33,7 @@
 				"nprogress": "0.2.0",
 				"path-match": "1.2.4",
 				"polished": "1.7.0",
-				"prettier": "^1.11.1",
+				"prettier": "1.11.1",
 				"prop-types": "15.6.0",
 				"query-parse": "2.0.0",
 				"react": "16.2.0",
@@ -42,7 +42,7 @@
 				"react-virtualized": "9.12.0",
 				"serverless": "1.25.0",
 				"showdown": "1.8.6",
-				"styled-jsx": "^2.2.6",
-				"styled-jsx-plugin-sass": "^0.2.4"
+				"styled-jsx": "2.2.6",
+				"styled-jsx-plugin-sass": "0.2.4"
 		}
 }

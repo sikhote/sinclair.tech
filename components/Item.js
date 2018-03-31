@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 import showdown from 'showdown';
-import style from '../styles/item'
+import style from '../styles/item';
 
 class Item extends Component {
   constructor(props) {

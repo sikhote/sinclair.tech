@@ -5,7 +5,7 @@ import Error from 'next/error';
 import Page from '../components/Page';
 import Item from './Item';
 import content from '../lib/content';
-import style from '../styles/feed'
+import style from '../styles/feed';
 
 const Feed = ({ alpha: id, router }) => {
   const page = router.pathname.replace(/\//g, '');
@@ -39,16 +39,13 @@ const Feed = ({ alpha: id, router }) => {
                     <div
                       className="image"
                       style={{
-                        backgroundImage: `url(/static/images/projects/${
-                          id
-                        }-1.jpg)`,
+                        backgroundImage:
+                          `url(/static/images/projects/${id}-1.jpg)`,
                       }}
                     />
                   )}
                   <div className="title">{title}</div>
-                  {type === 'thought' && (
-                    <div>{description}</div>
-                  )}
+                  {type === 'thought' && <div>{description}</div>}
                 </a>
               ))}
           </div>

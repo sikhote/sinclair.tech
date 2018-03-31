@@ -12,7 +12,7 @@ export const spacing = {
   larger: 24,
   huge: 32,
   huger: 48,
-  giant: 72
+  giant: 72,
 };
 
 export const colors = {
@@ -20,7 +20,7 @@ export const colors = {
   text: '#343A42',
   divider: '#343A42',
   codeBg: '#c3fae8',
-  feed: '#868e96'
+  feed: '#868e96',
 };
 
 export const fontSizes = {
@@ -30,12 +30,12 @@ export const fontSizes = {
   large: 'font-size: 24px;',
   larger: 'font-size: 28px;',
   huge: 'font-size: 30px;',
-  hugest: 'font-size: 36px;'
+  hugest: 'font-size: 36px;',
 };
 
 export const lineHeights = {
   normal: 'line-height: 1.4em;',
-  close: 'line-height: 1em;'
+  close: 'line-height: 1em;',
 };
 
 export const fontFamilies = {

@@ -39,7 +39,9 @@ class Page extends Component {
             {title ? `${content.divider}${title}` : ''}
           </title>
         </Head>
-        <style jsx global>{globalStyle}</style>
+        <style jsx global>
+          {globalStyle}
+        </style>
         <style jsx>{pageStyle}</style>
         <LoadingBar />
         <Navigation />

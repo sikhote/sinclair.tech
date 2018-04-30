@@ -4,7 +4,7 @@
 - [+1 858 480 1781](tel:+18584801781)
 
 ## Profile
-I am a front end website developer with a passion to learn and contribute. I have recent experience coding responsive websites and web apps in the latest standards and technology. I enjoy collaborating with teammates and clients alike to build complete solutions. Looking forward, I strive to continue learning in an ever-changing field, building intuitive applications, and collaborating with passionate and friendly people.
+I am a developer with a passion to learn and contribute. I have recent experience coding JavaScript heavy websites and the backend services they connect to using the latest standards and technology. I enjoy collaborating with teammates and clients alike to build complete solutions. Looking forward, I strive to continue learning in an ever-changing field, building intuitive applications, and collaborating with passionate and friendly people.
 
 ## Knowledge
 - Amazon Web Services

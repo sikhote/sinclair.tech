@@ -36,9 +36,10 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 ## Experience
 
-### Contract JavaScript Engineer at [Sony Electronics](http://www.sony.com/en_us/SCA)
-#### 2016–Present · Rancho Bernardo, CA
+### JavaScript Engineer at [Sony Electronics](http://www.sony.com/en_us/SCA)
+#### 2016–2018 · Rancho Bernardo, CA
 - Helped develop front end and back end features for a content manager that customers work with directly to produce phone applications used by college students and large events. The UI was built with Webpack, React, Redux. The APIs utilized AWS Lamda, Cognito, Dynamo, CloudWatch, and Google Firebase.
+- Successfully allowed golf swings, recorded on Android devices, to be analyzed by machine learning scripts. This was accomplished by building a Node API for transferring data from device to AWS, a React Native phone application for Android devices, and coordinating with team members that placed code onto an AWS EC2 Instance. The phone application worked on tablets and phones by recording a swing of a video, sending the video and human profile to the Node API, and executing a python script with supplied data.
 - Helped build and ship an interactive WebGL game for the 2018 SXSW event in Texas, in a very short timespan. The game imported 3D models, rendered them on a projector, allowed players to interact with the models, had sound effects, and turned out to be a huge success. Babylon.js, Webpack, React, Electron, and Node technologies allowed the game to work on any computer.
 - Fixed bugs and helped maintain [Play Memories Online](https://playmemoriesonline.com).
 - Prototyped a working Tennis Challenge mobile application in three weeks with more functionality than requested. Prototype was used for a successful live demonstration to a tennis school in Japan. Application was built using React, Redux, AWS, Webpack, and Express.

@@ -13,7 +13,9 @@ class Item extends Component {
     };
   }
   componentWillMount() {
-    const { item: { id, type } } = this.props;
+    const {
+      item: { id, type },
+    } = this.props;
     const converter = new showdown.Converter();
 
     fetch(`/static/text/${type}s/${id}.md`)
@@ -21,7 +23,9 @@ class Item extends Component {
       .then(text => this.setState({ content: converter.makeHtml(text) }));
   }
   render() {
-    const { item: { id, type, title, date, images } } = this.props;
+    const {
+      item: { id, type, title, date, images },
+    } = this.props;
     const { content } = this.state;
 
     return (

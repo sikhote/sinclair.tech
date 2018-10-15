@@ -4,18 +4,14 @@
 - [+1 858 480 1781](tel:+18584801781)
 
 ## Profile
-I am a developer with a passion to learn and contribute. I have recent experience coding JavaScript applications and websites and the backend services they connect to using the latest standards and technology. I enjoy collaborating with teammates and clients alike to build complete solutions. Looking forward, I strive to continue learning in an ever-changing field, building intuitive applications, and collaborating with passionate and friendly people.
+I am a developer with a passion to learn and contribute. I have recent experience coding React websites, React Native phone applications, and backend services needed to supply and compute data. I seek out best practices and standards in technology, but understand every project is different. I enjoy collaborating with teammates and clients alike to build complete solutions. Looking forward, I strive to continue learning in an ever-changing field of software engineering, building intuitive applications, and collaborating with passionate and friendly people.
 
 ## Knowledge
 - Amazon Web Services (AWS)
-- Angular 1.x
-- Babylon.js
-- Backbone
-- Bootstrap
 - CSS, Sass, & Less
 - Docker
 - Git
-- JavaScript, ES6, & jQuery
+- JavaScript
 - Jest & Nightwatch
 - Linux
 - Next.js
@@ -35,6 +31,12 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - U.C. San Diego—B.A. Political Science, 2008
 
 ## Experience
+
+### Senior Engineer at [Guild Mortgage](https://guildmortgage.com)
+#### 2018–Present · San Diego, CA
+- With a small team, built and submitted to Apple App Store a React Native mobile application that allows sales agents to support client needs. Application was designed and styled for iOS and Android devices. As a senior member of the team I led most technology and implementation decisions, supported all team members while most learned React and Redux, and led most code reviews.
+- Created boilerplates for multiple projects and led technology choices within the React ecosystem.
+- Led a team of three to create a single page application for uploading documents using React Native Web (for some cross-platform components).
 
 ### JavaScript Engineer at [Sony Electronics](http://www.sony.com/en_us/SCA)
 #### 2016–2018 · Rancho Bernardo, CA

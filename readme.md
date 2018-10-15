@@ -1,4 +1,4 @@
-[![Circle CI](https://img.shields.io/circleci/project/sikhote/sinclair.tech/master.svg)](https://circleci.com/gh/sikhote/sinclair.tech)
+[![CircleCI](https://circleci.com/gh/sikhote/sinclair.tech.svg?style=svg)](https://circleci.com/gh/sikhote/sinclair.tech)
 [![Dependency Status](https://david-dm.org/sikhote/sinclair.tech.svg)](https://david-dm.org/sikhote/sinclair.tech)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 

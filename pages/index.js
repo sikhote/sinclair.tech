@@ -1,16 +1,16 @@
 import React from 'react';
-import showdown from 'showdown';
-import Page from '../components/Page';
-import about from '../static/text/pages/about.md';
-import content from '../lib/content';
+import about from '../static/md/pages/about.md';
+import { converter } from '../lib/content';
+import PageTitle from '../components/PageTitle';
+import translations from '../lib/translations';
 
-const converter = new showdown.Converter();
+const html = converter.makeHtml(about);
 
 export default () => (
-  <Page title={content.pages.about.title}>
-    <div
-      className="content"
-      dangerouslySetInnerHTML={{ __html: converter.makeHtml(about) }}
-    />
-  </Page>
+  <div>
+    <PageTitle title={translations.siteDescription} />
+    {html && (
+      <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
+    )}
+  </div>
 );

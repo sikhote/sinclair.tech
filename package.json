@@ -1,48 +1,58 @@
 {
-		"name": "sinclairtech",
-		"description": "Personal website of David Sinclair",
-		"author": "David Sinclair <david@sinclair.tech> (https://sinclair.tech)",
-		"homepage": "sinclair.tech",
-		"aws": "sinclairtech",
-		"version": "0.0.1",
-		"private": true,
-		"scripts": {
-				"build": "next build",
-				"deploy": "serverless deploy",
-				"destroy": "serverless remove",
-				"eslint": "eslint \"./**/*.js\"",
-				"export": "next build && next export -o build",
-				"invalidate": "serverless invalidate",
-				"next": "node server.js",
-				"prettier": "prettier --write \"./**/*.js\"",
-				"server": "cd build && python -m SimpleHTTPServer",
-				"sync": "serverless sync"
-		},
-		"dependencies": {
-				"babel-eslint": "8.0.1",
-				"babel-plugin-inline-import": "2.0.6",
-				"eslint": "4.11.0",
-				"eslint-config-airbnb": "16.1.0",
-				"eslint-config-prettier": "2.8.0",
-				"eslint-plugin-import": "2.8.0",
-				"eslint-plugin-jsx-a11y": "6.0.2",
-				"eslint-plugin-react": "7.5.1",
-				"moment": "2.19.3",
-				"next": "5.1.0",
-				"node-sass": "4.7.2",
-				"nprogress": "0.2.0",
-				"path-match": "1.2.4",
-				"polished": "1.7.0",
-				"prettier": "^1.14.3",
-				"prop-types": "15.6.0",
-				"query-parse": "2.0.0",
-				"react": "16.2.0",
-				"react-dom": "16.2.0",
-				"react-highlight": "briancappello/react-highlight#react-v16-compiled",
-				"react-virtualized": "9.12.0",
-				"serverless": "1.25.0",
-				"showdown": "1.8.6",
-				"styled-jsx": "2.2.6",
-				"styled-jsx-plugin-sass": "0.2.4"
-		}
+  "name": "dougpalm.com",
+  "description": "Personal website of David Sinclair",
+  "author": "David Sinclair <david@sinclair.tech> (https://sinclair.tech)",
+  "homepage": "https://sinclair.tech",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "xo": {
+    "prettier": true,
+    "extends": "xo-react",
+    "rules": {
+      "react/no-danger": 0,
+      "unicorn/filename-case": 0
+    },
+    "settings": {
+      "import/core-modules": [
+        "styled-jsx",
+        "styled-jsx/css"
+      ],
+      "react": {
+        "version": "16.7.0-alpha.2"
+      }
+    },
+    "env": [
+      "browser",
+      "node"
+    ],
+    "space": 2
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "lodash": "4.17.11",
+    "moment": "2.23.0",
+    "next": "7.0.2",
+    "path-match": "1.2.4",
+    "prop-types": "15.6.2",
+    "raw-loader": "1.0.0",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
+    "react-highlight": "0.12.0",
+    "showdown": "1.9.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "eslint": "5.8.0",
+    "eslint-config-xo": "0.25.0",
+    "eslint-config-xo-react": "0.17.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "prettier": "1.15.2",
+    "xo": "0.23.0"
+  }
 }

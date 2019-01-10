@@ -1,9 +1,6 @@
 {
-  "version": 1,
-  "type": "docker",
-  "features": {
-    "cloud": "v2"
-  },
+  "version": 2,
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
   "alias": "sinclair.tech",
   "name": "sinclair"
 }

@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
-    { "src": "/thoughts/(?<id>[^/]+)$", "dest": "/thoughts?id=$id&type=thoughts" },
-    { "src": "/projects/(?<id>[^/]+)$", "dest": "/projects?id=$id&type=projects" }
+    { "src": "/thoughts/(?<id>[^/]+)$", "dest": "/item?id=$id&type=thoughts" },
+    { "src": "/projects/(?<id>[^/]+)$", "dest": "/item?id=$id&type=projects" }
   ],
   "alias": "sinclair.tech",
   "name": "sinclair"

@@ -24,8 +24,8 @@ export default css`
     position: relative;
   }
   .projects a:after {
-    background: ${colors.a1};
-    opacity: 0.5;
+    background: ${colors.a2};
+    opacity: 0.6;
     content: '';
     display: block;
     position: absolute;
@@ -46,10 +46,9 @@ export default css`
   .projects .content {
     position: relative;
     z-index: 1;
-    text-shadow: 0 0 10px black;
   }
   .thoughts a {
-    background: ${colors.a2};
+    background: ${colors.thoughtsBg};
   }
   .thoughts .content :global(div:first-child) {
     padding-bottom: ${spacing.a4}px;

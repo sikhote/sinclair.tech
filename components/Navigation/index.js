@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import Text from '../Text';
+import { colors } from '../../lib/styling';
 import styles from './styles';
 
 const Navigation = ({ router }) => (
@@ -15,7 +16,7 @@ const Navigation = ({ router }) => (
     ].map(({ href, title }) => (
       <Link key={href} href={href}>
         <a className={router.pathname === href ? 'active' : ''}>
-          <Text colorKey="a1" fontWeightKey="bold">
+          <Text color={colors.nav} fontWeightKey="bold">
             {title}
           </Text>
         </a>

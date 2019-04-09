@@ -24,35 +24,41 @@ export default css.global`
     padding-top: ${spacing.a5}px;
   }
   .markdown a {
-    color: ${colors.a1};
+    color: ${colors.links};
   }
   .markdown h1 {
     padding-bottom: ${spacing.a5}px;
     font-size: ${fontSizes.a5}px;
     font-weight: ${fontWeights.thin};
+    color: ${colors.h1};
   }
   .markdown h2 {
     padding-bottom: ${spacing.a3}px;
     font-size: ${fontSizes.a4}px;
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.thin};
+    color: ${colors.h2};
   }
   .markdown h3 {
     padding-bottom: ${spacing.a3}px;
     font-size: ${fontSizes.a3}px;
     font-weight: ${fontWeights.bold};
+    color: ${colors.h3};
   }
   .markdown h4 {
     padding-bottom: ${spacing.a3}px;
     font-size: ${fontSizes.a2}px;
     font-weight: ${fontWeights.bold};
+    color: ${colors.h4};
   }
   .markdown hr {
-    border-top: .1px solid ${colors.border};
+    height: 1px;
+    background: ${colors.border};
+    border: none;
     margin-top: ${spacing.a5}px;
     margin-bottom: ${spacing.a6}px;
   }
   .markdown blockquote {
-    color: ${colors.primary};
+    color: ${colors.a14};
     font-style: italic;
     font-size: ${fontSizes.a5}px;
     display: inline-block;
@@ -81,8 +87,8 @@ export default css.global`
   .markdown ol > li > code {
     font-size: ${fontSizes.a2}px;
     word-break: break-all;
-    background: ${colors.a3};
-    padding: ${spacing.a3}px ${spacing.a4}px;
+    background: ${colors.a2};
+    padding: ${spacing.a2}px ${spacing.a4}px;
   }
   .markdown img {
     max-width: 100%;
@@ -104,7 +110,7 @@ export default css.global`
     margin-left: ${spacing.a5}px;
   }
   .markdown > *:not(:last-child):not(h1):not(h2):not(h3):not(h4):not(hr) {
-    padding-bottom: ${spacing.a5}px;
+    padding-bottom: ${spacing.a6}px;
   }
 
   /*
@@ -114,18 +120,18 @@ export default css.global`
     display: block;
     overflow-x: auto;
     padding: 0.5em;
-    background: #002b36;
-    color: #839496;
+    background: ${colors.a2};
+    color: ${colors.text};
   }
   .hljs-comment,
   .hljs-quote {
-    color: #586e75;
+    color: ${colors.a3};
   }
   /* Solarized Green */
   .hljs-keyword,
   .hljs-selector-tag,
   .hljs-addition {
-    color: #859900;
+    color: ${colors.a16};
   }
   /* Solarized Cyan */
   .hljs-number,
@@ -134,7 +140,7 @@ export default css.global`
   .hljs-literal,
   .hljs-doctag,
   .hljs-regexp {
-    color: #2aa198;
+    color: ${colors.a15};
   }
   /* Solarized Blue */
   .hljs-title,
@@ -142,7 +148,7 @@ export default css.global`
   .hljs-name,
   .hljs-selector-id,
   .hljs-selector-class {
-    color: #268bd2;
+    color: ${colors.a14};
   }
   /* Solarized Yellow */
   .hljs-attribute,
@@ -151,7 +157,7 @@ export default css.global`
   .hljs-template-variable,
   .hljs-class .hljs-title,
   .hljs-type {
-    color: #b58900;
+    color: ${colors.a9};
   }
   /* Solarized Orange */
   .hljs-symbol,
@@ -162,15 +168,15 @@ export default css.global`
   .hljs-selector-attr,
   .hljs-selector-pseudo,
   .hljs-link {
-    color: #cb4b16;
+    color: ${colors.a10};
   }
   /* Solarized Red */
   .hljs-built_in,
   .hljs-deletion {
-    color: #dc322f;
+    color: ${colors.a11};
   }
   .hljs-formula {
-    background: #073642;
+    background: ${colors.a2};
   }
   .hljs-emphasis {
     font-style: italic;

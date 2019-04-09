@@ -17,7 +17,7 @@ export default css`
   }
   a.active {
     text-decoration: underline;
-    color: ${colors.a1};
+    color: ${colors.nav};
   }
 
   @media (max-width: ${bps.a2}px) {

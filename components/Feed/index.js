@@ -13,7 +13,7 @@ const Feed = ({ type }) => (
     <style jsx>{styles}</style>
     {feed
       .filter(item => item.type === type)
-      .map(({ id, title, description }) => (
+      .map(({ id, title, description, type }) => (
         <Link
           key={id}
           href={{ pathname: '/item', query: { type, id } }}
@@ -21,19 +21,21 @@ const Feed = ({ type }) => (
         >
           <a>
             <div className="content">
-              <Text color="white" fontWeightKey="thin" fontSizeKey="a5">
+              <Text colorKey="white" fontWeightKey="thin" fontSizeKey="a5">
                 {title}
               </Text>
-              <Text className="description" color="white" fontWeightKey="thin">
+              <Text className="description" fontWeightKey="thin">
                 {description}
               </Text>
             </div>
-            <div
-              className="image"
-              style={{
-                backgroundImage: `url(/static/img/projects/${id}-1.jpg)`,
-              }}
-            />
+            {type === 'projects' && (
+              <div
+                className="image"
+                style={{
+                  backgroundImage: `url(/static/img/projects/${id}-1.jpg)`,
+                }}
+              />
+            )}
           </a>
         </Link>
       ))}

@@ -28,8 +28,14 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 ## Experience
 
-### Senior Engineer at [Guild Mortgage](https://guildmortgage.com)
-#### 2018–Present · San Diego, CA
+### Senior Engineer (FTE) at [Guild Mortgage](https://guildmortgage.com)
+#### 2019–Present · San Diego, CA
+- Upgraded React Native phone application to use the latest versions of all dependencies, providing a platform for future releases and allowing automated build scripts.
+- Created and maintained automated end-2-end tests, unit tests, and API tests for all JavaScript projects. These tests were used to ensure code quality and functionality requirements before code reviews and QA testing, increasing team efficiency.
+- Integrated React components as part of transitioning an older PHP website into an API driven single page application. This allowed new designs and functionality to be implemented progressively without negatively impacting the user.
+
+### Senior Engineer (Contractor) at [Guild Mortgage](https://guildmortgage.com)
+#### 2018–2019 · San Diego, CA
 - With a small team, built and submitted to Apple App Store a React Native mobile application that allows sales agents to support client needs. The application was designed and styled for iOS and Android devices. As a senior member of the team, I also took the lead on technology and implementation decisions and code reviews.
 - Created boilerplates for multiple projects and led technology choices within the React ecosystem.
 - Led a team of three to create a single page application for uploading documents using [React Native Web](https://github.com/necolas/react-native-web) (for some cross-platform components).
@@ -38,7 +44,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 #### 2016–2018 · Rancho Bernardo, CA
 - Helped develop front end and back end features for a content manager that customers work with directly to produce phone applications used by college students and large events. The UI was built with Webpack, React, Redux. The APIs utilized AWS Lamda, Cognito, Dynamo, CloudWatch, and Google Firebase.
 - Successfully allowed golf swings, recorded on Android devices, to be analyzed by machine learning scripts. This was accomplished by building a Node API for transferring data from the device to AWS, a React Native phone application for Android devices, and coordinating with team members that placed code onto an AWS EC2 Instance. The phone application worked on tablets and phones by recording a swing of a video, sending the video and human profile to the Node API, and executing a python script with supplied data.
-- Helped build and ship an interactive WebGL game for the 2018 SXSW event in Texas, in a very short timespan. The game imported 3D models, rendered them on a projector, allowed players to interact with the models, had sound effects, and turned out to be a huge success. Babylon.js, Webpack, React, Electron, and Node technologies allowed the game to work on any computer.
+- Helped build and ship an interactive WebGL game for the 2018 SXSW event in Texas, in a very short time span. The game imported 3D models, rendered them on a projector, allowed players to interact with the models, had sound effects, and turned out to be a huge success. Babylon.js, Webpack, React, Electron, and Node technologies allowed the game to work on any computer.
 - Fixed bugs and helped maintain [Play Memories Online](https://playmemoriesonline.com).
 - Prototyped a working Tennis Challenge mobile application in three weeks with more functionality than requested. The prototype was used for a successful live demonstration to a tennis school in Japan. The application was built using React, Redux, AWS, Webpack, and Express.
 - Maintained a widely used, company built, Yeoman generator boilerplate. Added functionality in free time to allow TypeScript 2, Webpack, and Yarn as options within the generator. The generator also utilized React, Redux, Express, Sass, Less, and Browserify. Fixed errors within generator for open source release.

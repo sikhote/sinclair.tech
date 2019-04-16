@@ -5,6 +5,7 @@ import {
   fontSizes,
   colors,
   spacing,
+  lineHeights,
 } from '../../lib/styling';
 
 export default css.global`
@@ -17,8 +18,15 @@ export default css.global`
     font-family: ${fontFamilies.normal};
     font-weight: ${fontWeights.normal};
     font-size: ${fontSizes.a3}px;
+    line-height: ${lineHeights.normal};
     color: ${colors.text};
     background: ${colors.background};
+  }
+  @media print {
+    body {
+      color: ${colors.black};
+      background: ${colors.white};
+    }
   }
   .markdown:nth-of-type(n + 3) {
     padding-top: ${spacing.a5}px;
@@ -26,29 +34,59 @@ export default css.global`
   .markdown a {
     color: ${colors.links};
   }
+  @media print {
+    .markdown a {
+      color: ${colors.black};
+      text-decoration: none;
+    }
+  }
   .markdown h1 {
     padding-bottom: ${spacing.a5}px;
     font-size: ${fontSizes.a5}px;
     font-weight: ${fontWeights.thin};
     color: ${colors.h1};
+    line-height: ${lineHeights.normal};
+  }
+  @media print {
+    .markdown h1 {
+      color: ${colors.black};
+    }
   }
   .markdown h2 {
     padding-bottom: ${spacing.a3}px;
     font-size: ${fontSizes.a4}px;
     font-weight: ${fontWeights.thin};
     color: ${colors.h2};
+    line-height: ${lineHeights.normal};
+  }
+  @media print {
+    .markdown h2 {
+      color: ${colors.black};
+    }
   }
   .markdown h3 {
     padding-bottom: ${spacing.a3}px;
     font-size: ${fontSizes.a3}px;
     font-weight: ${fontWeights.bold};
     color: ${colors.h3};
+    line-height: ${lineHeights.normal};
+  }
+  @media print {
+    .markdown h3 {
+      color: ${colors.black};
+    }
   }
   .markdown h4 {
     padding-bottom: ${spacing.a3}px;
     font-size: ${fontSizes.a2}px;
     font-weight: ${fontWeights.bold};
     color: ${colors.h4};
+    line-height: ${lineHeights.normal};
+  }
+  @media print {
+    .markdown h4 {
+      color: ${colors.black};
+    }
   }
   .markdown hr {
     height: 1px;

@@ -6,5 +6,7 @@
     { "src": "/projects/(?<id>[^/]+)$", "dest": "/item?id=$id&type=projects" }
   ],
   "alias": "sinclair.tech",
-  "name": "sinclair"
+  "github": {
+    "silent": true
+  }
 }

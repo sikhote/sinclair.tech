@@ -41,7 +41,7 @@
     "lodash": "4.17.11",
     "mdpdf": "^2.0.2",
     "moment": "2.23.0",
-    "next": "7.0.2",
+    "next": "9.3.2",
     "path-match": "1.2.4",
     "prop-types": "15.6.2",
     "raw-loader": "1.0.0",

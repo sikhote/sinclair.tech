@@ -51,7 +51,7 @@ Finally, I append this to the `.bashrc` in the root directory, which enables ZSH
 zsh
 ```
 
-Install nvm, node, yarn, & prettier (for editor)
+## Setup nvm, node, yarn, & prettier (for editor)
 Next, I installed a bunch Node related items that I use on a daily basis. NPM is already installed (yay), so I make sure the version I want is being used and then I instrall yarn as well. Pretier is needed globally installed because the Editor assumes it is available at the root level. I'm not a big fan, but it's better than not using it.
 ```
 nvm install 14

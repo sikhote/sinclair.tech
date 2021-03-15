@@ -52,12 +52,12 @@ zsh
 ```
 
 ## Setup nvm, node, yarn, & prettier (for editor)
-Next, I installed a bunch Node related items that I use on a daily basis. NPM is already installed (yay), so I make sure the version I want is being used and then I instrall yarn as well. Pretier is needed globally installed because the Editor assumes it is available at the root level. I'm not a big fan, but it's better than not using it.
+Next, I installed a bunch Node related items that I use on a daily basis. NPM is already installed (yay), so I make sure the version I want is being used and then I instrall yarn as well. Pretier is needed globally installed because the Editor assumes it is available at the root level. I'm not a big fan of this way of using Prettier (bleh to global installs), but it's better than not using it.
 ```
 nvm install 14
 nvm alias default 14
-install yarn `npm install --global yarn
-install yarn `npm install --global prettier
+npm install --global yarn
+npm install --global prettier
 ```
 
 ## Configure Git

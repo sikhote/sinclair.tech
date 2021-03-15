@@ -1,4 +1,4 @@
-Last week I started researching what it would be like to code in an online editor. I'd tried this about 2-3 years ago, but it just didn't seem to click back then. I can't remember why not, but I think it was a combination of not knowing how to get most out of it and the tool not have all features I find necessary.
+Last week I started researching what it would be like to code in an online editor. I'd tried this about 2-3 years ago, but it just didn't seem to click back then. I can't remember why not, but I think it was a combination of not knowing how to get most out of it and the tool not having all the features I find necessary.
 
 Anyhow, I tried it out again and after a few days I think I have it tuned to how I like. Here's what I did (these steps assume some familiarity with the terminal):
 

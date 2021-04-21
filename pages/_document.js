@@ -1,6 +1,4 @@
-import React from 'react';
-import NextDocument, { Head, Main, NextScript } from 'next/document';
-import Favicons from '../components/Favicons';
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx) {
@@ -10,16 +8,19 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <html>
+      <Html>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <Favicons />
+          <link rel="icon" href="/assets/img/favicon.svg" />
+          <link
+            rel="stylesheet"
+            href="/assets/fonts/fontello/css/fontello.css"
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

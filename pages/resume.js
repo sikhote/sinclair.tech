@@ -1,3 +1,3 @@
-import Resume from '../components/Resume';
+import Page from 'components/pages/Resume';
 
-export default Resume;
+export default Page;

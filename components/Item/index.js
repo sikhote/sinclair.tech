@@ -1,99 +1,65 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Error from 'next/error';
-import moment from 'moment';
-import axios from 'axios';
-import Highlight from 'react-highlight';
-import PageTitle from '../PageTitle';
-import { converter } from '../../lib/content';
-import feed from '../../lib/feed';
+import { parseISO, format } from 'date-fns';
+import PageMeta from 'components/PageMeta';
+import Md from 'components/Md';
+import Grid from 'components/Grid';
+import Image from 'next/image';
 import styles from './styles';
 
-const getData = ({ id, type, setState }) => {
-  if (!id || !type) {
-    return;
-  }
+const Item = ({ html, item }) => {
+  const { title, description, type, images, id, date } = item || {};
 
-  const markdownPromise = axios
-    .get(`/static/md/${type}/${id}.md`)
-    .then(res => converter.makeHtml(res.data))
-    .catch(() => null);
-
-  Promise.all([markdownPromise]).then(([a]) =>
-    setState({
-      html: a,
-      item: feed.find(item => item.id === id) || {},
-    }),
-  );
-};
-
-const Item = ({ id, type }) => {
-  const initialState = {
-    html: undefined,
-    item: {},
-  };
-  const [state, setState] = useState(initialState);
-  const {
-    html,
-    item: { title, description, date, images },
-  } = state;
-
-  useEffect(() => getData({ id, type, setState }), [id, type]);
-
-  if (!id || !type || html === null) {
+  if (!html) {
     return <Error statusCode={404} />;
   }
 
-  if (html === undefined) {
-    return null;
-  }
-
   return (
-    <div className="root">
-      <PageTitle title={title} description={description} />
-      <style jsx>{styles}</style>
-      <div>
-        {title && (
-          <div className="markdown">
-            <h1>{title}</h1>
-          </div>
-        )}
-        {html && (
-          <Highlight innerHTML className="markdown">
-            {html}
-          </Highlight>
-        )}
-        {type === 'thoughts' && date && (
-          <div className="markdown">
-            <p>Posted {moment(date).format('MMMM Do, YYYY')}.</p>
-          </div>
-        )}
-      </div>
-      {type === 'projects' && (
-        <div>
-          {new Array(images).fill(0).map((a, i) => (
-            <img
-              key={`${id}-${i + 1}`}
-              alt={title}
-              src={`/static/img/projects/${id}-${i + 1}.jpg`}
-            />
-          ))}
-        </div>
-      )}
-    </div>
+    <>
+      <PageMeta title={title} description={description} />
+      <Grid
+        items={[
+          <div>
+            {title && (
+              <Md>
+                <h1>{title}</h1>
+              </Md>
+            )}
+            {html && (
+              <Md innerHTML container="highlight">
+                {html}
+              </Md>
+            )}
+            {type === 'thoughts' && date && (
+              <Md>
+                <p>Posted {format(parseISO(date), 'MMMM do, yyyy')}.</p>
+              </Md>
+            )}
+          </div>,
+          type === 'projects' ? (
+            <ul css={styles.images}>
+              {new Array(images).fill(0).map((a, i) => (
+                <li key={`${id}-${i + 1}`}>
+                  <Image
+                    alt={title}
+                    src={`/assets/img/projects/${id}-${i + 1}.jpg`}
+                    layout="fill"
+                    objectFit="cover"
+                  />{' '}
+                </li>
+              ))}
+            </ul>
+          ) : null,
+        ]}
+      />
+    </>
   );
 };
 
-Item.getInitialProps = ({ query: { id, type } }) => ({ id, type });
-
 Item.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.string,
-};
-
-Item.defaultProps = {
-  id: '',
-  type: '',
+  html: PropTypes.string.isRequired,
+  item: PropTypes.object.isRequired,
 };
 
 export default Item;

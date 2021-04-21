@@ -1,45 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { capitalize } from 'lodash';
-import PageTitle from '../PageTitle';
-import Text from '../Text';
-import feed from '../../lib/feed';
+import { capitalize, merge } from 'lodash';
+import PageMeta from 'components/PageMeta';
+import Grid from 'components/Grid';
+import feed from 'lib/feed';
 import styles from './styles';
+import Image from 'next/image';
 
 const Feed = ({ type }) => (
-  <div className={`root ${type}`}>
-    <PageTitle title={capitalize(type)} />
-    <style jsx>{styles}</style>
-    {feed
-      .filter(item => item.type === type)
-      .map(({ id, title, description, type }) => (
-        <Link
-          key={id}
-          href={{ pathname: '/item', query: { type, id } }}
-          as={`/${type}/${id}`}
-        >
-          <a>
-            <div className="content">
-              <Text colorKey="white" fontWeightKey="thin" fontSizeKey="a5">
-                {title}
-              </Text>
-              <Text className="description" fontWeightKey="thin">
-                {description}
-              </Text>
-            </div>
-            {type === 'projects' && (
-              <div
-                className="image"
-                style={{
-                  backgroundImage: `url(/static/img/projects/${id}-1.jpg)`,
-                }}
-              />
-            )}
-          </a>
-        </Link>
-      ))}
-  </div>
+  <>
+    <PageMeta title={capitalize(type)} />
+    <Grid
+      rootCss={merge(
+        {},
+        styles.items,
+        type === 'thoughts' ? styles.itemsThoughts : {},
+        type === 'projects' ? styles.itemsProjects : {},
+      )}
+      items={feed.reduce((acc, { id, title, description, type: itemType }) => {
+        if (itemType === type) {
+          acc.push(
+            <div key={id}>
+              <Link href={`/${itemType}/${id}`}>
+                <a>
+                  <strong>{title}</strong>
+                  {description && <span>{description}</span>}
+                  {itemType === 'projects' && (
+                    <Image
+                      alt={title}
+                      src={`/assets/img/projects/${id}-1.jpg`}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  )}
+                </a>
+              </Link>
+            </div>,
+          );
+        }
+
+        return acc;
+      }, [])}
+    />
+  </>
 );
 
 Feed.propTypes = {

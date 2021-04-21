@@ -1,21 +1,16 @@
-import css from 'styled-jsx/css';
-import { spacing, bps } from '../../lib/styling';
+import { fontSizes, colors, spacing, bps, fontWeights } from 'lib/styling';
 
-export default css`
-  .root {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
-    grid-gap: ${spacing.a5}px;
-  }
-  img {
-    width: 100%;
-  }
+const styles = {
+  images: {
+    display: 'flex',
+    gap: spacing.f,
+    flexDirection: 'column',
+    listStyle: 'none',
+    li: {
+      position: 'relative',
+      height: 300,
+    },
+  },
+};
 
-  @media (max-width: ${bps.a2}px) {
-    .root {
-      grid-auto-rows: auto;
-      grid-auto-flow: row;
-    }
-  }
-`;
+export default styles;

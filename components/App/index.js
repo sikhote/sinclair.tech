@@ -1,31 +1,50 @@
 import React from 'react';
-import NextApp, { Container } from 'next/app';
-import Page from '../Page';
+import PropTypes from 'prop-types';
 import styles from './styles';
+import { Global } from '@emotion/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-class App extends NextApp {
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
+const App = ({ Component, pageProps }) => {
+  const router = useRouter();
 
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
+  return (
+    <>
+      <Global styles={styles.global} />
+      <nav css={styles.nav}>
+        {[
+          { href: '/', title: 'Home', icon: 'home' },
+          // { href: '/pictures', title: 'Pictures', icon: 'camera' },
+          { href: '/projects', title: 'Projects', icon: 'folder' },
+          { href: '/thoughts', title: 'Thoughts', icon: 'feather' },
+        ].map(({ href, title, icon }) => (
+          <Link passHref key={href} href={href}>
+            <a
+              css={[
+                styles.link,
+                router.pathname === href ? styles.linkActive : {},
+              ]}
+            >
+              <i className={`icon-${icon}`} />
+              <span>{title}</span>
+            </a>
+          </Link>
+        ))}
+      </nav>
+      <main css={styles.main}>
+        <Component {...{ ...pageProps }} />
+      </main>
+    </>
+  );
+};
 
-    return { pageProps };
-  }
+App.propTypes = {
+  Component: PropTypes.any.isRequired,
+  pageProps: PropTypes.object,
+};
 
-  render() {
-    const { Component, pageProps } = this.props;
-
-    return (
-      <Container>
-        <style jsx>{styles}</style>
-        <Page>
-          <Component {...pageProps} />
-        </Page>
-      </Container>
-    );
-  }
-}
+App.defaultProps = {
+  pageProps: {},
+};
 
 export default App;

@@ -1,3 +1,3 @@
-import About from '../components/About';
+import Page from 'components/pages/About';
 
-export default About;
+export default Page;

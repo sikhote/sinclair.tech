@@ -6,58 +6,38 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
-    "build": "next build",
+    "dev": "next",
+    "build": "yarn lint && yarn pretty && next build",
     "start": "NODE_ENV=production node server.js",
-    "pdf": "node lib/resume-to-pdf.js"
-  },
-  "xo": {
-    "prettier": true,
-    "extends": "xo-react",
-    "rules": {
-      "react/no-danger": 0,
-      "unicorn/filename-case": 0
-    },
-    "settings": {
-      "import/core-modules": [
-        "styled-jsx",
-        "styled-jsx/css"
-      ],
-      "react": {
-        "version": "16.7.0-alpha.2"
-      }
-    },
-    "env": [
-      "browser",
-      "node"
-    ],
-    "space": 2
+    "pdf": "node lib/resume-to-pdf.js",
+    "lint": "eslint . -c eslint.config.js",
+    "pretty": "prettier --check .",
+    "fix": "yarn lint --fix && prettier --write ."
   },
   "dependencies": {
-    "app-root-path": "^2.2.1",
-    "axios": "0.18.0",
+    "@babel/core": "^7.13.13",
+    "@emotion/babel-plugin": "^11.2.0",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/react": "^11.1.5",
+    "cross-fetch": "^3.1.4-alpha.0",
+    "date-fns": "^2.19.0",
     "electron-pdf": "1.3.2",
-    "express": "^4.16.4",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "lodash": "4.17.11",
     "mdpdf": "^2.0.2",
-    "moment": "2.23.0",
-    "next": "7.0.2",
-    "path-match": "1.2.4",
-    "prop-types": "15.6.2",
+    "next": "^10.0.9",
+    "prettier": "^2.2.1",
+    "prop-types": "^15.7.2",
     "raw-loader": "1.0.0",
-    "react": "16.7.0-alpha.2",
-    "react-dom": "16.7.0-alpha.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-highlight": "0.12.0",
     "showdown": "1.9.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "10.0.1",
-    "eslint": "5.8.0",
-    "eslint-config-xo": "0.25.0",
-    "eslint-config-xo-react": "0.17.0",
-    "eslint-plugin-prettier": "3.0.0",
-    "eslint-plugin-react": "7.11.1",
-    "prettier": "1.15.2",
-    "xo": "0.23.0"
   }
 }

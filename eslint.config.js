@@ -4,6 +4,11 @@ module.exports = {
     browser: true,
     node: true,
   },
+  settings: {
+    'import/resolver': {
+      node: { extensions: ['.js'], moduleDirectory: ['node_modules', './'] },
+    },
+  },
   rules: {
     'react/jsx-filename-extension': 0,
     'react/forbid-prop-types': 0,
@@ -18,5 +23,7 @@ module.exports = {
     'react/jsx-no-target-blank': 0,
     'default-case': 0,
     'no-unused-expressions': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'react/react-in-jsx-scope': 0,
   },
 };

@@ -11,7 +11,12 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Global styles={styles.global} />
-      <nav css={styles.nav}>
+      <nav
+        css={[
+          styles.nav,
+          router.pathname === '/resume' ? styles.navResume : {},
+        ]}
+      >
         {[
           { href: '/', title: 'Home', icon: 'home' },
           // { href: '/pictures', title: 'Pictures', icon: 'camera' },
@@ -31,7 +36,12 @@ const App = ({ Component, pageProps }) => {
           </Link>
         ))}
       </nav>
-      <main css={styles.main}>
+      <main
+        css={[
+          styles.main,
+          router.pathname === '/resume' ? styles.mainResume : {},
+        ]}
+      >
         <Component {...{ ...pageProps }} />
       </main>
     </>

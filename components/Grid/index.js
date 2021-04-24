@@ -3,8 +3,8 @@ import styles from './styles';
 
 const Grid = ({ items, rootCss }) => (
   <ul css={[styles.root, rootCss]}>
-    {items.map((item, index) => (
-      <li key={index}>{item}</li>
+    {items.map(({ item, key }) => (
+      <li key={key}>{item}</li>
     ))}
   </ul>
 );

@@ -20,24 +20,27 @@ const Feed = ({ type }) => (
       )}
       items={feed.reduce((acc, { id, title, description, type: itemType }) => {
         if (itemType === type) {
-          acc.push(
-            <div key={id}>
-              <Link href={`/${itemType}/${id}`}>
-                <a>
-                  <strong>{title}</strong>
-                  {description && <span>{description}</span>}
-                  {itemType === 'projects' && (
-                    <Image
-                      alt={title}
-                      src={`/assets/img/projects/${id}-1.jpg`}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  )}
-                </a>
-              </Link>
-            </div>,
-          );
+          acc.push({
+            key: id,
+            item: (
+              <div key={id}>
+                <Link href={`/${itemType}/${id}`}>
+                  <a>
+                    <strong>{title}</strong>
+                    {description && <span>{description}</span>}
+                    {itemType === 'projects' && (
+                      <Image
+                        alt={title}
+                        src={`/assets/img/projects/${id}-1.jpg`}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    )}
+                  </a>
+                </Link>
+              </div>
+            ),
+          });
         }
 
         return acc;

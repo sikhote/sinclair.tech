@@ -4,32 +4,34 @@
 - [+1 858 480 1781](tel:+18584801781)
 
 ## Profile
-I am a developer with a passion to learn and contribute. I have recent experience coding React websites, React Native phone applications, and backend services needed to supply and compute data. I seek out best practices and standards in technology but understand every project is different. I enjoy collaborating with teammates and clients alike to build complete solutions. Looking forward, I strive to continue learning in an ever-changing field of software engineering, building intuitive applications, and collaborating with passionate and friendly people.
+I am a developer with a passion to learn and contribute. I have recent experience coding React websites, React Native phone applications, and backend services needed to supply and compute data. I seek out best practices and standards in technology. I enjoy collaborating with teammates and clients alike to build complete solutions. Looking forward, I strive to continue learning in an ever-changing field of software engineering, building intuitive applications, and collaborating with passionate and friendly people. For fun, I often play fútbol, dabble in photography, and hike.
 
 ## Knowledge
 - Amazon Web Services (AWS)
-- CSS, Sass, Less, [Styled-JSX](https://github.com/zeit/styled-jsx), [Glamor](https://github.com/dan-lee/glamor-jss/)
+- CSS, [Sass](https://sass-lang.com/), & [Styled Components](https://github.com/styled-components/styled-components)
 - Docker
 - Git
 - [Jest](https://jestjs.io/) & [Nightwatch](http://nightwatchjs.org/)
 - Linux
 - [Next](https://nextjs.org)
 - Node & Express
-- [Now](https://zeit.co/now)
 - [React](https://reactjs.org) & [React Native](https://facebook.github.io/react-native/)
 - [Redux](https://redux.js.org/)
-- JavaScript, [TypeScript](https://www.typescriptlang.org/), & [Flow](https://flow.org/)
+- JavaScript & [TypeScript](https://www.typescriptlang.org/)
+- [Vercel](https://vercel.com/)
 - [Webpack](https://webpack.js.org/)
-
-## Education
-- Optimizely Platform Certified, 2015
-- U.C. San Diego Extension—Graphic Design Certified, 2011
-- U.C. San Diego—B.A. Political Science, 2008
 
 ## Experience
 
+### Senior Engineer at [Veyl Ventures](https://veyl.com)
+#### 2021 - Present · Remote
+- Built universal checkout page that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design.
+- Created server side rendered, react, e-commerce websites for brands of the company
+- Created optimized landing pages for sales
+- Team lead for all React developmemt and front-end best practices
+
 ### Senior Engineer (FTE) at [Guild Mortgage](https://guildmortgage.com)
-#### 2019–Present · San Diego, CA
+#### 2019–2021 · Remote
 - Upgraded React Native phone application to use the latest versions of all dependencies, providing a platform for future releases and allowing automated build scripts.
 - Created and maintained automated end-2-end tests, unit tests, and API tests for all JavaScript projects. These tests were used to ensure code quality and functionality requirements before code reviews and QA testing, increasing team efficiency.
 - Integrated React components as part of transitioning an older PHP website into an API driven single page application. This allowed new designs and functionality to be implemented progressively without negatively impacting the user.
@@ -78,3 +80,8 @@ Helped design and develop web projects in HTML5, LESS CSS3, and JavaScript/jQuer
 ### Designer & Developer at [DD Studio](http://ddstudio.com)
 #### Carlsbad, CA · 2011
 Helped develop an interface for EcoATM kiosks using Flash ActionScript and XML. Helped design interface for EcoATM kiosks using Flash, Illustrator, and Photoshop. Created exterior artwork for EcoATM kiosks. Helped design an interface for a Rain Bird sprinkler system. Designed label graphics for Rain Bird sprinkler system. Designed promotional materials for events and internal documents. Updated labels and graphics for various projects. Created presentations and participated in client meetings. Designed and prepared files for print.
+
+## Education
+- Optimizely Platform Certified, 2015
+- U.C. San Diego Extension—Graphic Design Certified, 2011
+- U.C. San Diego—B.A. Political Science, 2008

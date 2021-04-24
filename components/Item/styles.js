@@ -1,4 +1,4 @@
-import { fontSizes, colors, spacing, bps, fontWeights } from 'lib/styling';
+import { spacing } from 'lib/styling';
 
 const styles = {
   images: {

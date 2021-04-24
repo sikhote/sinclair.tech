@@ -29,11 +29,14 @@ const styles = {
       bottom: 0,
       left: 0,
       flexDirection: 'row',
-      background: colors.darkGrey2
+      background: colors.darkGrey2,
     },
     '@media print': {
       display: 'none',
     },
+  },
+  navResume: {
+    display: 'none',
   },
   link: {
     fontSize: fontSizes.c,
@@ -76,7 +79,18 @@ const styles = {
       padding: '0 0 54px 0',
     },
     '@media print': {
-      margin: 0,
+      maxWidth: '100% !important',
+      padding: '0 !important',
+      margin: '0 !important',
+    },
+  },
+  mainResume: {
+    [`@media (max-width: ${bps.e - 1}px)`]: {
+      padding: spacing.h,
+      maxWidth: 990,
+      margin: '0 auto',
+    },
+    [`@media (max-width: ${bps.a - 1}px)`]: {
       padding: 0,
     },
   },
@@ -96,6 +110,13 @@ const styles = {
     }
     ::selection {
       background: ${colors.darkGrey1};
+    }
+
+    @media print {
+      body {
+        color: ${colors.black};
+        background: ${colors.white};
+      }
     }
   `,
 };

@@ -1,17 +1,18 @@
 import React from 'react';
-import { converter } from '../../lib/content';
-import PageMeta from '../PageMeta';
-import translations from '../../lib/translations';
+import converter from 'lib/converter';
+import PageMeta from 'components/PageMeta';
+import lang from 'lib/lang';
 import content from './content.md';
-// import styles from './styles';
+import Md from 'components/Md';
+import styles from './styles';
 
 const html = converter.makeHtml(content);
 
-export default () => (
-  <div className="root">
-    <PageMeta title={translations.resume} />
-    {html && (
-      <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
-    )}
+const Resume = () => (
+  <div css={styles.root}>
+    <PageMeta title={lang.resume} />
+    <Md html={html} />
   </div>
 );
+
+export default Resume;

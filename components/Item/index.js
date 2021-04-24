@@ -20,37 +20,47 @@ const Item = ({ html, item }) => {
       <PageMeta title={title} description={description} />
       <Grid
         items={[
-          <div>
-            {title && (
-              <Md>
-                <h1>{title}</h1>
-              </Md>
-            )}
-            {html && (
-              <Md innerHTML container="highlight">
-                {html}
-              </Md>
-            )}
-            {type === 'thoughts' && date && (
-              <Md>
-                <p>Posted {format(parseISO(date), 'MMMM do, yyyy')}.</p>
-              </Md>
-            )}
-          </div>,
-          type === 'projects' ? (
-            <ul css={styles.images}>
-              {new Array(images).fill(0).map((a, i) => (
-                <li key={`${id}-${i + 1}`}>
-                  <Image
-                    alt={title}
-                    src={`/assets/img/projects/${id}-${i + 1}.jpg`}
-                    layout="fill"
-                    objectFit="cover"
-                  />{' '}
-                </li>
-              ))}
-            </ul>
-          ) : null,
+          {
+            key: 0,
+            item: (
+              <div>
+                {title && (
+                  <Md>
+                    <h1>{title}</h1>
+                  </Md>
+                )}
+                {html && (
+                  <Md innerHTML container="highlight">
+                    {html}
+                  </Md>
+                )}
+                {type === 'thoughts' && date && (
+                  <Md>
+                    <p>Posted {format(parseISO(date), 'MMMM do, yyyy')}.</p>
+                  </Md>
+                )}
+              </div>
+            ),
+          },
+          type === 'projects'
+            ? {
+                key: 1,
+                item: (
+                  <ul css={styles.images}>
+                    {new Array(images).fill(0).map((a, i) => (
+                      <li key={`${id}-${i + 1}`}>
+                        <Image
+                          alt={title}
+                          src={`/assets/img/projects/${id}-${i + 1}.jpg`}
+                          layout="fill"
+                          objectFit="cover"
+                        />{' '}
+                      </li>
+                    ))}
+                  </ul>
+                ),
+              }
+            : { key: 1 },
         ]}
       />
     </>

@@ -21,10 +21,12 @@ const Md = ({ container, html, ...props }) => {
 
 Md.propTypes = {
   container: PropTypes.string,
+  html: PropTypes.string,
 };
 
 Md.defaultProps = {
   container: 'default',
+  html: '',
 };
 
 export default Md;

@@ -1,4 +1,3 @@
-import css from 'styled-jsx/css';
 import { fontSizes, colors, spacing, bps, fontWeights } from 'lib/styling';
 
 const styles = {

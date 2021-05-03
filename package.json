@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "eslint . -c eslint.config.js",
     "pretty": "prettier --check .",
-    "fix": "yarn lint --fix && prettier --write ."
+    "fix": "yarn lint --fix && prettier --write .",
+    "pdf": "electron-pdf -p A3 -m 0 -b false https://sinclair.tech/resume public/assets/downloads/David-Sinclair-Resume.pdf"
   },
   "dependencies": {
     "@babel/core": "^7.13.13",
@@ -20,6 +21,7 @@
     "@emotion/react": "^11.1.5",
     "cross-fetch": "^3.1.4-alpha.0",
     "date-fns": "^2.19.0",
+    "electron-pdf": "^10.0.2",
     "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",

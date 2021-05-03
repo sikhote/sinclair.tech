@@ -1,6 +1,7 @@
 The [Serverless](https://github.com/serverless/serverless) framework is a strong option for using Amazon Web Services (AWS), which builds a network for you—I investigated some alternatives that all look to ease your AWS needs.
 
 ## Claudia.JS
+
 Check out the [Website](https://claudiajs.com), [GitHub](https://github.com/claudiajs/claudia), and [Example Projects](https://github.com/claudiajs/example-projects)
 
 Claudia is a tool for automating steps that create AWS API Gateways and linked Lambda functions. The best part about Claiudia is that the API endpoints are regular Node.js. It can also easily tap into DynamoDB with ease. At first glance, it is about the same as Serverless, but it claims to be different—rather than being a complete solution that sits above AWS Services, Claudia looks to work with them.
@@ -8,6 +9,7 @@ Claudia is a tool for automating steps that create AWS API Gateways and linked L
 > Rather than being a complete solution that sits above AWS Services, Claudia looks to work with them
 
 "Claudia is a deployment utility, not a framework", it claims. Another large difference is in deployment: whereas Serverless uses an AWS CloudFormation template to build out resources, Claudia does it all without one. What is [CloudFormation](https://aws.amazon.com/cloudformation)? There's a lot to it, but to summarize: it is an AWS service that puts together the pieces of AWS resources in a standardized way. While not ultimately necessary, CloudFormation has its benefits:
+
 - Connect services through template files to create a Stack
 - A CloudFormation Stack can be managed all at once
 - CloudFormation goes far beyond linking only API Gateways and Lambda functions
@@ -28,7 +30,6 @@ After creating the template.yaml file, it is time to package and deploy. Using t
 
 Overall, I think with a better tutorial I could have gone a bit further, but documentation was lacking and error messages were not clear at first. On to bigger and better things...maybe one day SAM will be given more priority and provide a better experience.
 
-
 ## Apex, Terraform, & Swagger
 
 [Apex](http://apex.run/) markets itself as a way to "build, deploy, and manage AWS Lambda functions with ease". Right away I got the impression that Apex was about developing in your language of choice, allowing the communities like cult of Go coders to write-away in in the AWS ecosystem. Apex is able to do this "through the use of a Node.js shim injected into the build". Apex also seems to come with a lot of tools for testing, logging, and deployment.
@@ -44,4 +45,5 @@ Next, I looked into using [Swagger](http://swagger.io) to link Lambda/Apex funct
 Looking to automate the Swagger/API Gateway/Lambda method, I tried out a package called "apex-api-gateway" that "helps you deploying your Apex project into API Gateway". Perfect! I tried to build an API using their provided [boilerplate](https://github.com/YoruNoHikage/apex-api-gateway-boilerplate). Unfortunately, this tool was a bit outdated or I had bad luck, as it would not create the API (I got an obscure error)...oh well.
 
 ## In Conclusion
+
 There are some interesting options out there for deploying an AWS API Gateway and Lambda functions. Serverless seems to be on the right path of finding a good balance between ease of use and powerful features. I did not expect to like Claudia.JS so much, but it really made the process of creating an API within AWS easy. Expect another post soon explaining how to create an API and a deeper comparison to Serverless. Looking on, there are certainly other ecosystems to explore, like Google's Cloud services—Serverless even has examples of connecting to them.

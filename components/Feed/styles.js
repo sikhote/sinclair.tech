@@ -17,7 +17,7 @@ const styles = {
     },
     [`@media (max-width: ${bps.a - 1}px)`]: {
       padding: 0,
-    }
+    },
   },
   itemsThoughts: {
     li: {

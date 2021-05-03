@@ -18,6 +18,7 @@ foo(
 This is where ESLint falls short...it can be examine the maximum length for a line, but it does not fix lines that are too long...it also does not fix a lot of other issues it reports. [Prettier](https://github.com/prettier/prettier) steps in with an opinionated solution for this issue and nearly all other formatting issues.
 
 ## How it Works
+
 [Prettier](https://github.com/prettier/prettier) parses all code and returns a reinterpreted version that conforms to any configuration options. The parse and reformat approach is different than ESLint, because all code is rewritten, rather than examined.
 
 > all code is rewritten, rather than examined
@@ -25,9 +26,11 @@ This is where ESLint falls short...it can be examine the maximum length for a li
 [Prettier](https://github.com/prettier/prettier) proclaims it never has to check code, as it just writes it out, fresh. Kind of scary, right?
 
 ## Interfacing with Prettier
+
 There are a few options to start using [Prettier](https://github.com/prettier/prettier):
 
 ### API
+
 Using the [prettier](https://www.npmjs.com/package/prettier) npm package, you can format some code with the `format` method:
 
 ```
@@ -44,9 +47,11 @@ const newSource = format(source, {
 ```
 
 ### Editor Plugins
+
 Editor plugins are available for Atom, Emacs, Vim, Visual Studio Code, Visual Studio, Sublime Text, & JetBrains. I used the plugin for Atom and it was interesting, to say the least. There were options to always use the plugin or on demand. Using it on demand is very handy and how I currently have my editor configured. Using it as _always on_ is very neat, because as soon as you save a file, it gets parsed in front of your eyes and all your coding blunders, like forgotten semi-colons (the agony!), are fixed. A consideration with having it always on is that it changes a lot of lines. Lots of line changes are not necessarily a problem, but you might often work on projects where not everyone uses [Prettier](https://github.com/prettier/prettier). As you can imagine, Git diffs can get _pretty_ large.
 
 ### Command Line Integration
+
 Assuming you have globally installed [Prettier](https://github.com/prettier/prettier), you can execute `prettier` on some files:
 
 ```
@@ -54,6 +59,7 @@ prettier --single-quote --trailing-comma es5 --write "{app,__{tests,mocks}__}/**
 ```
 
 ### Gulp
+
 There is also the [gulp-prettier](https://github.com/bhargavrpatel/gulp-prettier) plugin that can be used like any other Gulp plugin:
 
 ```
@@ -72,6 +78,7 @@ gulp.task('prettier', () => gulp
 ```
 
 ### Webpack
+
 There are plugins for using Prettier with Webpack, but they are not without issues (at time of writing). The main issue is that Prettier rewrites files, causing Webpack to run it's bundling process twice. There's also issues where the process crashes on syntax errors. With that said, here are the plugins:
 
 - [prettier-webpack-plugin](https://github.com/hawkins/prettier-webpack-plugin)
@@ -82,7 +89,8 @@ There are plugins for using Prettier with Webpack, but they are not without issu
 Overall, all of these options make [Prettier](https://github.com/prettier/prettier) easy to integrate. Using an editor plugin is a good place to start.
 
 ## Configuration Options
-Let's checkout a configuration object with __all__ options:
+
+Let's checkout a configuration object with **all** options:
 
 ```
 const prettierConfig = {
@@ -119,9 +127,10 @@ const prettierConfig = {
 Coming form the world of ESLint options, which has practically everything, I found this underwhelming. I don't _need_ more options, because the unchangeable formatting choices are quite good, but it feels like there is a deficit in flexibility.
 
 ## Integration with ESLint & Other Tools
+
 The proliferation of tools for making ESLint and Prettier work together is important to mention, because, in a way, these are two competing technologies. There are rules within ESLint that overlap Prettier's domain, which is OK, because the two can play nicely. For one, Prettier can infer it's own rules from an `.eslintrc` file. Also, Prettier is typically executed _before_ ESLint. Let's look at a common task flow:
 
-__Code is Saved__ -> __Prettier modifies files__ -> __ESLint does final checks (with or without fixing)__
+**Code is Saved** -> **Prettier modifies files** -> **ESLint does final checks (with or without fixing)**
 
 So, first your code gets tidied up by Prettier, then ESLint steps in for a final assessment of formatting issues to address Prettier's youthfulness. And why? It seems some people still want more rules enforced, rules which Prettier does affect in one way or another when it spits out the code it has consumed.
 
@@ -130,16 +139,17 @@ There are few ways to combine ESLint and Prettier. Copying straight from Prettie
 - [eslint-plugin-prettier](https://github.com/not-an-aardvark/eslint-plugin-prettier) plugs prettier into your ESLint workflow
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) turns off all ESLint rules that are unnecessary or might conflict with prettier
 - [prettier-eslint](https://github.com/prettier/prettier-eslint)
-passes `prettier` output to `eslint --fix`
+  passes `prettier` output to `eslint --fix`
 - [prettier-standard](https://github.com/sheerun/prettier-standard)
-uses `prettier` and `prettier-eslint` to format code with standard rules
+  uses `prettier` and `prettier-eslint` to format code with standard rules
 - [prettier-standard-formatter](https://github.com/dtinth/prettier-standard-formatter)
-passes `prettier` output to `standard --fix`
+  passes `prettier` output to `standard --fix`
 - [prettier-with-tabs](https://github.com/arijs/prettier-with-tabs)
-allows you to configure prettier to use `tabs`
+  allows you to configure prettier to use `tabs`
 - [neutrino-preset-prettier](https://github.com/SpencerCDixon/neutrino-preset-prettier) allows you to use prettier as a neutrino preset
 
 ## Pros
+
 - Greater formatting consistency
 - Ends a lot of formatting discussions
 - Easy to use
@@ -150,15 +160,18 @@ allows you to configure prettier to use `tabs`
 - Parses all code and writes new files, which requires valid code
 
 ## Cons
+
 - Opinionated due to lack of configuration options
 - Still in beta phase and may change
 - Slightly unpredictable
 - Parses all code and writes new files, which is a bit scary
 
 ## Where is the Value
+
 Using [Prettier](https://github.com/prettier/prettier) on a daily basis for projects could bring a lot of consistency to any committed code. It is common for a project to have more than one active developer; adding [Prettier](https://github.com/prettier/prettier) to these projects would save back and forth time in pull requests, save time when coding (no more taking time to format things yourself), and push every style to be on the same page. Sure, it sounds a bit like everyone's code is wearing the same uniform, but for code that is a good thing. [Prettier](https://github.com/prettier/prettier) allows developers to focus on other types of quality, not just that it passes linting rules.
 
 ## Integrating with an Existing Project
+
 I wanted to test out how much change I might see on a project I commonly work on, so I added a simple NPM script to execute on command:
 
 ```
@@ -167,7 +180,7 @@ I wanted to test out how much change I might see on a project I commonly work on
 
 I wanted to see how many files would be changed, what the code would look like, and how _ugly_ the code was. I ran the script and waited...it took maybe 2 seconds to execute. For my project, nearly every file was touched:
 
-__48 changed files with 594 additions and 538 deletions.__
+**48 changed files with 594 additions and 538 deletions.**
 
 What did it change? Was it useful? Well, it brought a lot of consistency to the code. Check out a portion of a `git diff` that shows some common changes:
 
@@ -188,6 +201,7 @@ fontFamily: "'Roboto', sans-serif",
 Not too big of a deal, but our ESLint file did not like those double quotes. I added `/* eslint-disable quotes */ ` to the top of the file and said goodbye to the linting error. In this case, it might be good to remove the ESLint rule for quotes, since Prettier can handle it. I was pleasantly surprised by the results of applying Prettier...allowing a library in beta to modify code does worry me, a bit, but this was a positive result.
 
 ## Conclusion
+
 I was on the fence about adopting [Prettier](https://github.com/prettier/prettier) when I first came across it—I wanted all formatting options to be configurable. At some point ESLint practically spoiled coders with options that are not terribly important. It is also worth noting that, for the sake of consistency, developers must withdraw their personal preferences and adopt a standard. Using [Prettier](https://github.com/prettier/prettier) not only brings standards, it automatically enforces them as well. What's great about this is the automation—it is a hassle to code and fix formatting issues that you might not even agree with...it's much more enjoyable to code when the _boring_ parts are done for you...like adding semi-colons and making sure you added a space after a curly brace.
 
 > This is a beta, and the format may change over time

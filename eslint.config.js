@@ -26,5 +26,5 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     'react/react-in-jsx-scope': 0,
   },
-  ignores: ['next.config.js'],
+  ignorePatterns: ['next.config.js'],
 };

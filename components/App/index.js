@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }) => {
       >
         {[
           { href: '/', title: 'Home', icon: 'home' },
-          { href: '/pictures', title: 'Pictures', icon: 'camera' },
+          // { href: '/pictures', title: 'Pictures', icon: 'camera' },
           { href: '/projects', title: 'Projects', icon: 'folder' },
           { href: '/thoughts', title: 'Thoughts', icon: 'feather' },
         ].map(({ href, title, icon }) => (

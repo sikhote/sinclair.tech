@@ -30,10 +30,12 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 #### 2021 - Present · Remote
 
-- Built universal checkout page that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design.
+- Built universal checkout page using Next.js (React) that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design
 - Created server side rendered, react, e-commerce websites for brands of the company
 - Created optimized landing pages for sales
 - Team lead for all React developmemt and front-end best practices
+- Created an automated return portal to reduce CX contact
+- Added i18n functionality across sales and checkout pages
 
 ### Senior Engineer (FTE) at [Guild Mortgage](https://guildmortgage.com)
 

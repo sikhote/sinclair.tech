@@ -3,3 +3,4 @@ node_modules
 yarn-error.log
 .next
 build
+public/assets/img/pictures2/

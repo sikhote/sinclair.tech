@@ -1,4 +1,4 @@
-import { spacing } from 'lib/styling';
+import { spacing, bps } from 'lib/styling';
 
 const styles = {
   images: {
@@ -9,6 +9,12 @@ const styles = {
     li: {
       position: 'relative',
       height: 300,
+      img: {
+        cursor: 'pointer',
+      },
+    },
+    [`@media (max-width: ${bps.a - 1}px)`]: {
+      gap: spacing.e,
     },
   },
 };

@@ -1,23 +1,49 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import Error from 'next/error';
 import { parseISO, format } from 'date-fns';
 import PageMeta from 'components/PageMeta';
 import Md from 'components/Md';
 import Grid from 'components/Grid';
+import Overlay from 'components/Overlay';
 import Image from 'next/image';
 import styles from './styles';
 
 const Item = ({ html, item }) => {
+  const [popupIndex, setPopupIndex] = useState();
   const { title, description, type, images, id, date } = item || {};
+  const onImageListClick = useCallback((e) => {
+    if (e.target instanceof HTMLImageElement) {
+      const image = e.target;
+      const li = image.parentNode.parentNode;
+      const ul = li.parentNode;
+      const index = Array.prototype.indexOf.call(ul.childNodes, li);
+      setPopupIndex(index);
+    }
+  }, []);
 
   if (!html) {
     return <Error statusCode={404} />;
   }
 
+  console.log(popupIndex);
+
   return (
     <>
       <PageMeta title={title} description={description} />
+      {popupIndex !== undefined && (
+        <div onClick={() => setPopupIndex()}>
+          <Overlay>
+            <Image
+              alt={title}
+              src={`/assets/img/projects/${id}-${popupIndex + 1}.jpg`}
+              layout="fill"
+              objectFit="contain"
+              quality={100}
+            />
+          </Overlay>
+        </div>
+      )}
       <Grid
         items={[
           {
@@ -46,7 +72,7 @@ const Item = ({ html, item }) => {
             ? {
                 key: 1,
                 item: (
-                  <ul css={styles.images}>
+                  <ul css={styles.images} onClick={onImageListClick}>
                     {new Array(images).fill(0).map((a, i) => (
                       <li key={`${id}-${i + 1}`}>
                         <Image
@@ -54,7 +80,7 @@ const Item = ({ html, item }) => {
                           src={`/assets/img/projects/${id}-${i + 1}.jpg`}
                           layout="fill"
                           objectFit="cover"
-                        />{' '}
+                        />
                       </li>
                     ))}
                   </ul>

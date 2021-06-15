@@ -26,8 +26,6 @@ const Item = ({ html, item }) => {
     return <Error statusCode={404} />;
   }
 
-  console.log(popupIndex);
-
   return (
     <>
       <PageMeta title={title} description={description} />

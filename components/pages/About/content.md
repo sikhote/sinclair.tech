@@ -24,7 +24,7 @@ In terms of technology and coding, lately I've been learning [Vue](https://vuejs
 
 Aside from coding, I've been hoping for a trip to practice photography in a new location, perhaps Vermont. I've also been playing soccer and enjoying every splash in the ocean.
 
-### 20200101
+### 2020-01-01
 
 Lately I've been learning more about React Native development at Guild Mortgage, where I worked with a team that built an iOS and Android phone application. I had worked on a React Native Android application at Sony, so it was interesting to apply that knowledge to another project. I have found that styling can sometimes be tricky between the different platforms, but in general, basic content and layouts is very transferrable. I've also been continuing to hone my React skills by creating small one-off mobile-friendly websites using Next.js as a base.
 

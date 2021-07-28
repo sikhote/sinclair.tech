@@ -10,17 +10,18 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 ## Knowledge
 
-- Amazon Web Services (AWS)
-- CSS, [Sass](https://sass-lang.com/), & [Styled Components](https://github.com/styled-components/styled-components)
-- Docker
-- Git
+- [Amazon Web Services (AWS)](https://aws.amazon.com/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Sass](https://sass-lang.com/), & [Styled Components](https://github.com/styled-components/styled-components)
+- [Docker](https://www.docker.com/)
+- [Git](https://git-scm.com/)
 - [Jest](https://jestjs.io/) & [Nightwatch](http://nightwatchjs.org/)
-- Linux
+- [Linux](https://www.linux.org/)
 - [Next](https://nextjs.org)
-- Node & Express
+- [Node](https://nodejs.org) & [Express](https://expressjs.com/)
+- [NPM](https://www.npmjs.com/) & [Yarn](https://yarnpkg.com/)
 - [React](https://reactjs.org) & [React Native](https://facebook.github.io/react-native/)
 - [Redux](https://redux.js.org/)
-- JavaScript & [TypeScript](https://www.typescriptlang.org/)
+- [JavaScript](https://www.javascript.com/) & [TypeScript](https://www.typescriptlang.org/)
 - [Vercel](https://vercel.com/)
 - [Webpack](https://webpack.js.org/)
 
@@ -28,7 +29,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 ### Senior Engineer at [Veyl Ventures](https://veyl.com)
 
-#### 2021 - Present · Remote
+#### 2021–Present · Remote
 
 - Built universal checkout page using Next.js (React) that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design
 - Created server side rendered, react, e-commerce websites for brands of the company

@@ -30,7 +30,12 @@ const Item = ({ html, item }) => {
     <>
       <PageMeta title={title} description={description} />
       {popupIndex !== undefined && (
-        <div onClick={() => setPopupIndex()}>
+        <div
+          onClick={() => setPopupIndex()}
+          onKeyPress={() => setPopupIndex()}
+          role="button"
+          tabIndex="0"
+        >
           <Overlay>
             <Image
               alt={title}
@@ -70,18 +75,26 @@ const Item = ({ html, item }) => {
             ? {
                 key: 1,
                 item: (
-                  <ul css={styles.images} onClick={onImageListClick}>
-                    {new Array(images).fill(0).map((a, i) => (
-                      <li key={`${id}-${i + 1}`}>
-                        <Image
-                          alt={title}
-                          src={`/assets/img/projects/${id}-${i + 1}.jpg`}
-                          layout="fill"
-                          objectFit="cover"
-                        />
-                      </li>
-                    ))}
-                  </ul>
+                  <div
+                    onClick={onImageListClick}
+                    onKeyPress={onImageListClick}
+                    role="button"
+                    tabIndex="0"
+                    css={styles.images}
+                  >
+                    <ul>
+                      {new Array(images).fill(0).map((a, i) => (
+                        <li key={`${id}-${i + 1}`}>
+                          <Image
+                            alt={title}
+                            src={`/assets/img/projects/${id}-${i + 1}.jpg`}
+                            layout="fill"
+                            objectFit="cover"
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ),
               }
             : { key: 1 },

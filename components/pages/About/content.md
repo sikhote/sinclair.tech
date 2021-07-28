@@ -2,15 +2,7 @@
 
 Developer & photographer from Encinitas, California.
 
-I have primarily worked on both front and back end JavaScript projects with some exposure to Postgres and MongoDB. I am primarily focused on progressing my back end and database development experience, while maintaining my strengths in front end development. View my resume [online](/resume) or [download](/assets/downloads/David-Sinclair-Resume.pdf) it. I also have [GitHub](https://github.com/sikhote), [LinkedIn](https://www.linkedin.com/in/davidesinclair/), and [Stack Overflow](http://stackoverflow.com/users/1754543/david-sinclair) accounts to view.
-
-## What I'm Up To
-
-Lately I've been learning more about React Native development at Guild Mortgage, where I worked with a team that built an iOS and Android phone application. I had worked on a React Native Android application at Sony, so it was interesting to apply that knowledge to another project. I have found that styling can sometimes be tricky between the different platforms, but in general, basic content and layouts is very transferrable. I've also been continuing to hone my React skills by creating small one-off mobile-friendly websites using Next.js as a base.
-
-Before Guild Mortgage, I was working at Sony Electronics. In my time there I helped create a game for a large electronics event, a golfing application that helped analyze a player's swing, a content management system for a collection phone application, and many other small, but fun, projects.
-
-I do a decent job of keeping up with the latest JavaScript web crazes, even though it's a little crazy to even try. In my spare time I often have a website project or two of my own that help me develop familiarity with new tools and frameworks. Currently I am enjoying React Native Web, Next.js, and React Virtualized. I also have been testing my experience coding Node API endpoints, Postgres databases, MongoDB databases, and all the AWS services I can wrap my brain around.
+I have primarily worked on both front and back end JavaScript projects with some exposure to Postgres and MongoDB. I am focused on progressing my back end and database development experience, while maintaining my strengths in front end development. View my resume [online](/resume) or [download](/assets/downloads/David-Sinclair-Resume.pdf) it. I also have [GitHub](https://github.com/sikhote), [LinkedIn](https://www.linkedin.com/in/davidesinclair/), and [Stack Overflow](http://stackoverflow.com/users/1754543/david-sinclair) accounts to view.
 
 ## Project Approach
 
@@ -23,3 +15,19 @@ I began creating computer-game websites for fun. While in a Political Science un
 ## My Root Cause
 
 An important part of my life is my love for the environment. I am doing what I can to live in a way that promotes sustainable living and leaves nature as untouched as possible. It is important to me that the tools I use, methods for delivery, and any aspect of my design and life is about being in harmony with my surroundings. I find the most beautiful things in life are natural. I strongly encourage making a contribution to helping the environment: adventuring a hike, thinking about your every day life process and what personal changes might help, or donating time and money to an environmental cause. If you need help with your environmental cause, especially web development help, please send me an email! It's on my resume.
+
+## What I'm Up To
+
+### 2021-07-27
+
+In terms of technology and coding, lately I've been learning [Vue](https://vuejs.org/) for an upcoming role at [REI](https://rei.com), polishing some Redux skills, and casually working on a website I use to play music—in particular, getting it mobile and iPad friendly.
+
+Aside from coding, I've been hoping for a trip to practice photography in a new location, perhaps Vermont. I've also been playing soccer and enjoying every splash in the ocean.
+
+### 20200101
+
+Lately I've been learning more about React Native development at Guild Mortgage, where I worked with a team that built an iOS and Android phone application. I had worked on a React Native Android application at Sony, so it was interesting to apply that knowledge to another project. I have found that styling can sometimes be tricky between the different platforms, but in general, basic content and layouts is very transferrable. I've also been continuing to hone my React skills by creating small one-off mobile-friendly websites using Next.js as a base.
+
+Before Guild Mortgage, I was working at Sony Electronics. In my time there I helped create a game for a large electronics event, a golfing application that helped analyze a player's swing, a content management system for a collection phone application, and many other small, but fun, projects.
+
+I do a decent job of keeping up with the latest JavaScript web crazes, even though it's a little crazy to even try. In my spare time I often have a website project or two of my own that help me develop familiarity with new tools and frameworks. Currently I am enjoying React Native Web, Next.js, and React Virtualized. I also have been testing my experience coding Node API endpoints, Postgres databases, MongoDB databases, and all the AWS services I can wrap my brain around.

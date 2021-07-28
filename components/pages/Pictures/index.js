@@ -17,18 +17,21 @@ const getPictureInfo = (picture) => {
 
 const Pictures = ({ pictures }) => {
   const [popupPicture, setPopupPicture] = useState();
-  const onImageListClick = useCallback((e) => {
-    if (e.target instanceof HTMLImageElement) {
-      const image = e.target;
-      const li = image.parentNode.parentNode.parentNode;
-      const ul = li.parentNode;
-      const index = Array.prototype.indexOf.call(ul.childNodes, li);
-      setPopupPicture(getPictureInfo(pictures[index]));
-    }
-  }, []);
+  const onImageListClick = useCallback(
+    (e) => {
+      if (e.target instanceof HTMLImageElement) {
+        const image = e.target;
+        const li = image.parentNode.parentNode.parentNode;
+        const ul = li.parentNode;
+        const index = Array.prototype.indexOf.call(ul.childNodes, li);
+        setPopupPicture(getPictureInfo(pictures[index]));
+      }
+    },
+    [pictures],
+  );
   const picturesElements = useMemo(
     () =>
-      pictures.map((picture, i) => {
+      pictures.map((picture) => {
         const { src, date } = getPictureInfo(picture);
         return (
           <li key={src} data-src={src}>
@@ -46,7 +49,12 @@ const Pictures = ({ pictures }) => {
     <>
       <PageMeta title={lang.pictures} />
       {Boolean(popupPicture) && (
-        <div onClick={() => setPopupPicture()}>
+        <div
+          onClick={() => setPopupPicture()}
+          onKeyPress={() => setPopupPicture()}
+          role="button"
+          tabIndex="0"
+        >
           <Overlay>
             <Image
               alt={popupPicture.date}
@@ -58,9 +66,15 @@ const Pictures = ({ pictures }) => {
           </Overlay>
         </div>
       )}
-      <ul css={styles.images} onClick={onImageListClick}>
-        {picturesElements}
-      </ul>
+      <div
+        onClick={onImageListClick}
+        onKeyPress={onImageListClick}
+        role="button"
+        tabIndex="0"
+        css={styles.images}
+      >
+        <ul>{picturesElements}</ul>
+      </div>
     </>
   );
 };

@@ -5,3 +5,4 @@
 # sinclair.tech
 
 Personal website of David Sinclair
+

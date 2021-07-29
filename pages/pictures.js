@@ -4,7 +4,7 @@ import { readdirSync } from 'fs';
 
 export const getStaticProps = () => {
   const pictures = readdirSync(
-    path.join(__dirname, '../../../public/assets/img/pictures/'),
+    path.join(process.cwd(), 'public/assets/img/pictures/'),
   )
     .filter((picture) => picture !== '.DS_Store')
     .reverse();

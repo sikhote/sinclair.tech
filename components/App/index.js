@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import { Global } from '@emotion/react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();

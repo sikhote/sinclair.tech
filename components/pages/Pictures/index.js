@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import PageMeta from 'components/PageMeta';
+import PageMeta from 'components/PageMeta/index.server';
 import lang from 'lib/lang';
 import Overlay from 'components/Overlay';
 import Image from 'next/image';

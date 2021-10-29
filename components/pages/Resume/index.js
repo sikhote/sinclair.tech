@@ -1,9 +1,9 @@
 import React from 'react';
 import converter from 'lib/converter';
-import PageMeta from 'components/PageMeta';
+import PageMeta from 'components/PageMeta/index.server';
 import lang from 'lib/lang';
 import content from './content.md';
-import Md from 'components/Md';
+import Md from 'components/Md/index.server';
 import styles from './styles';
 
 const html = converter.makeHtml(content);

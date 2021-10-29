@@ -1,3 +1,3 @@
-import Page from 'components/pages/About/index.server';
+import Page from 'components/pages/About';
 
 export default Page;

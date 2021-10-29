@@ -2,9 +2,10 @@ import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import Error from 'next/error';
 import { parseISO, format } from 'date-fns';
-import PageMeta from 'components/PageMeta/index.server';
-import Md from 'components/Md/index.server';
-import Grid from 'components/Grid/index.server';
+import PageMeta from 'components/PageMeta';
+import Md from 'components/Md';
+import MdHighlight from 'components/MdHighlight/index.client';
+import Grid from 'components/Grid';
 import Overlay from 'components/Overlay';
 import Image from 'next/image';
 import styles from './styles';
@@ -58,11 +59,7 @@ const Item = ({ html, item }) => {
                     <h1>{title}</h1>
                   </Md>
                 )}
-                {html && (
-                  <Md innerHTML container="highlight">
-                    {html}
-                  </Md>
-                )}
+                {html && <MdHighlight innerHTML>{html}</MdHighlight>}
                 {type === 'thoughts' && date && (
                   <Md>
                     <p>Posted {format(parseISO(date), 'MMMM do, yyyy')}.</p>

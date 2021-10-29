@@ -1,12 +1,12 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import PropTypes from 'prop-types';
-import PageMeta from 'components/PageMeta/index.server';
+import React, { useState, useCallback } from 'react';
+import PageMeta from 'components/PageMeta';
 import lang from 'lib/lang';
 import Overlay from 'components/Overlay';
 import Image from 'next/image';
 import styles from './styles';
 import { parseISO, format } from 'date-fns';
 
+const pictures = JSON.parse(process.env.pictures);
 const picturesPath = '/assets/img/pictures';
 const getPictureInfo = (picture) => {
   const src = `${picturesPath}/${picture}`;
@@ -15,35 +15,17 @@ const getPictureInfo = (picture) => {
   return { src, date, location, name };
 };
 
-const Pictures = ({ pictures }) => {
+const Pictures = () => {
   const [popupPicture, setPopupPicture] = useState();
-  const onImageListClick = useCallback(
-    (e) => {
-      if (e.target instanceof HTMLImageElement) {
-        const image = e.target;
-        const li = image.parentNode.parentNode.parentNode;
-        const ul = li.parentNode;
-        const index = Array.prototype.indexOf.call(ul.childNodes, li);
-        setPopupPicture(getPictureInfo(pictures[index]));
-      }
-    },
-    [pictures],
-  );
-  const picturesElements = useMemo(
-    () =>
-      pictures.map((picture) => {
-        const { src, date } = getPictureInfo(picture);
-        return (
-          <li key={src} data-src={src}>
-            <figure>
-              <Image alt={date} src={src} layout="fill" objectFit="cover" />
-            </figure>
-            <legend>{date}</legend>
-          </li>
-        );
-      }),
-    [pictures],
-  );
+  const onImageListClick = useCallback((e) => {
+    if (e.target instanceof HTMLImageElement) {
+      const image = e.target;
+      const li = image.parentNode.parentNode.parentNode;
+      const ul = li.parentNode;
+      const index = Array.prototype.indexOf.call(ul.childNodes, li);
+      setPopupPicture(getPictureInfo(pictures[index]));
+    }
+  }, []);
 
   return (
     <>
@@ -73,14 +55,28 @@ const Pictures = ({ pictures }) => {
         tabIndex="0"
         css={styles.images}
       >
-        <ul>{picturesElements}</ul>
+        <ul>
+          {pictures.map((picture, i) => {
+            const { src, date } = getPictureInfo(picture);
+            return (
+              <li key={src} data-src={src}>
+                <figure>
+                  <Image
+                    alt={date}
+                    src={src}
+                    layout="fill"
+                    objectFit="cover"
+                    priority={i === 0}
+                  />
+                </figure>
+                <legend>{date}</legend>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </>
   );
-};
-
-Pictures.propTypes = {
-  pictures: PropTypes.array.isRequired,
 };
 
 export default Pictures;

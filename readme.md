@@ -7,3 +7,4 @@
 ### Personal website of David Sinclair
 
 Built on Next.js and hosted by Vercel
+

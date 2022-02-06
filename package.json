@@ -29,12 +29,12 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "lodash": "^4.17.21",
-    "next": "^12.0.0",
+    "next": "^12.0.10",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
     "raw-loader": "^4.0.2",
-    "react": "^18.0.0-alpha-6c3dcc7a4-20211027",
-    "react-dom": "^18.0.0-alpha-6c3dcc7a4-20211027",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-highlight": "^0.14.0",
     "showdown": "^1.9.1"
   }

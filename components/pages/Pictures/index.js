@@ -4,28 +4,22 @@ import lang from 'lib/lang';
 import Overlay from 'components/Overlay';
 import Image from 'next/image';
 import styles from './styles';
-import { parseISO, format } from 'date-fns';
+import PropTypes from 'prop-types';
 
-const pictures = JSON.parse(process.env.pictures);
-const picturesPath = '/assets/img/pictures';
-const getPictureInfo = (picture) => {
-  const src = `${picturesPath}/${picture}`;
-  const [rawDate, location, name] = picture.split(' - ');
-  const date = format(parseISO(rawDate), 'MMMM do, yyyy');
-  return { src, date, location, name };
-};
-
-const Pictures = () => {
+const Pictures = ({ pictures }) => {
   const [popupPicture, setPopupPicture] = useState();
-  const onImageListClick = useCallback((e) => {
-    if (e.target instanceof HTMLImageElement) {
-      const image = e.target;
-      const li = image.parentNode.parentNode.parentNode;
-      const ul = li.parentNode;
-      const index = Array.prototype.indexOf.call(ul.childNodes, li);
-      setPopupPicture(getPictureInfo(pictures[index]));
-    }
-  }, []);
+  const onImageListClick = useCallback(
+    (e) => {
+      if (e.target instanceof HTMLImageElement) {
+        const image = e.target;
+        const li = image.parentNode.parentNode.parentNode;
+        const ul = li.parentNode;
+        const index = Array.prototype.indexOf.call(ul.childNodes, li);
+        setPopupPicture(pictures[index]);
+      }
+    },
+    [pictures],
+  );
 
   return (
     <>
@@ -56,27 +50,28 @@ const Pictures = () => {
         css={styles.images}
       >
         <ul>
-          {pictures.map((picture, i) => {
-            const { src, date } = getPictureInfo(picture);
-            return (
-              <li key={src} data-src={src}>
-                <figure>
-                  <Image
-                    alt={date}
-                    src={src}
-                    layout="fill"
-                    objectFit="cover"
-                    priority={i === 0}
-                  />
-                </figure>
-                <legend>{date}</legend>
-              </li>
-            );
-          })}
+          {pictures.map(({ src, date }, i) => (
+            <li key={src} data-src={src}>
+              <figure>
+                <Image
+                  alt={date}
+                  src={src}
+                  layout="fill"
+                  objectFit="cover"
+                  priority={i === 0}
+                />
+              </figure>
+              <legend>{date}</legend>
+            </li>
+          ))}
         </ul>
       </div>
     </>
   );
+};
+
+Pictures.propTypes = {
+  pictures: PropTypes.array.isRequired,
 };
 
 export default Pictures;

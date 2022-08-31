@@ -23,13 +23,22 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - [Redux](https://redux.js.org/)
 - [JavaScript](https://www.javascript.com/) & [TypeScript](https://www.typescriptlang.org/)
 - [Vercel](https://vercel.com/)
+- [Vue](https://vuejs.org/)
 - [Webpack](https://webpack.js.org/)
 
 ## Experience
 
-### Senior Engineer at [Veyl Ventures](https://veyl.com)
+### Senior Front-End Engineer at [REI Co-Op](https://rei.com)
 
 #### 2021–Present · Remote
+
+- Upgraded all components in various microsites to meet ARIA compliance and reach brand alignment
+- Helped developed the UI for a new checkout UI that upgraded a half a decade old experience
+- Created a new component system that worked with the existing CMS for allowing faster and more compliant content creation
+
+### Senior Engineer at [Veyl Ventures](https://veyl.com)
+
+#### 2021 · Remote
 
 - Built universal checkout page using Next.js (React) that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design
 - Created server side rendered, react, e-commerce websites for brands of the company

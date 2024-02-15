@@ -88,7 +88,7 @@ The following UI kits are available to bring Material UI styling and functionali
 
 - **Components:** Avatar, Button, Checkbox, CheckboxGroup, Divider, Icon, IconButton, List, RadioButton, Ripple, Subheader, Toolbar
 - **Approach:** Components
-- **Experience:** Lots of documentation, but does not claim to support iOS and does not explain how to access components in a normal way (import { Button } from 'mrn';)...so I did not use it.
+- **Experience:** Lots of documentation, but does not claim to support iOS and does not explain how to access components in a normal way (`import { Button } from 'mrn';`)...so I did not use it.
 - **Popularity and Activity**:
   - 377 downloads in the last month
   - Last commit on Dec 3, 2015

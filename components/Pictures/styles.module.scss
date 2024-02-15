@@ -1,0 +1,61 @@
+.popupPicture {
+  object-fit: cover;
+}
+
+.images {
+  display: flex;
+  gap: var(--spacingHuge);
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+
+  li {
+    background: var(--backgroundLight);
+    padding: var(--spacingLarge);
+    display: flex;
+    flex-direction: column;
+
+    figure {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      img {
+        cursor: pointer;
+        object-fit: cover;
+      }
+    }
+
+    legend {
+      padding-top: var(--spacingLarge);
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 900px) {
+    gap: 1px;
+
+    li {
+      padding: var(--spacingMedium);
+    }
+  }
+}
+
+.imagesTall {
+  li {
+    height: 600px;
+  }
+
+  @media (max-width: 900px) {
+    li {
+      height: 300px;
+    }
+  }
+}
+
+.imagesShort {
+  li {
+    height: 300px;
+  }
+}

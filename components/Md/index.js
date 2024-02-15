@@ -1,21 +1,13 @@
-import PropTypes from 'prop-types';
-import styles from './styles';
+'use server';
 
-const Md = ({ html, ...props }) => (
-  <div
-    css={styles.root}
-    {...(html ? { dangerouslySetInnerHTML: { __html: html } } : {})}
-    className="markdown"
-    {...props}
-  />
-);
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import styles from './styles.module.scss';
 
-Md.propTypes = {
-  html: PropTypes.string,
-};
-
-Md.defaultProps = {
-  html: '',
-};
-
-export default Md;
+export default async function Md({ children, source }) {
+  return (
+    <div className={styles.md}>
+      {children}
+      {source && <MDXRemote source={source} />}
+    </div>
+  );
+}

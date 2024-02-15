@@ -1,0 +1,21 @@
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: var(--zIndexNav);
+  width: 100%;
+  height: 100%;
+  background: var(--backgroundDark);
+  cursor: pointer;
+  padding: var(--spacingPage);
+
+  & > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    padding: var(--spacingMedium);
+  }
+}

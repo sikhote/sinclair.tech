@@ -1,109 +1,60 @@
-import React, { useCallback, useState } from 'react';
-import PropTypes from 'prop-types';
-import Error from 'next/error';
 import { parseISO, format } from 'date-fns';
-import PageMeta from 'components/PageMeta';
 import Md from 'components/Md';
-import MdHighlight from 'components/MdHighlight/index.client';
 import Grid from 'components/Grid';
-import Overlay from 'components/Overlay';
-import Image from 'next/image';
-import styles from './styles';
+import Pictures from 'components/Pictures';
+import feed from 'lib/feed';
+import { promises as fs } from 'fs';
+import { notFound } from 'next/navigation';
+import styles from './styles.module.scss';
 
-const Item = ({ html, item }) => {
-  const [popupIndex, setPopupIndex] = useState();
-  const { title, description, type, images, id, date } = item || {};
-  const onImageListClick = useCallback((e) => {
-    if (e.target instanceof HTMLImageElement) {
-      const image = e.target;
-      const li = image.parentNode.parentNode;
-      const ul = li.parentNode;
-      const index = Array.prototype.indexOf.call(ul.childNodes, li);
-      setPopupIndex(index);
-    }
-  }, []);
+export default async function Item({ params }) {
+  const { id } = params;
+  const item = feed.find((i) => i.id === id);
 
-  if (!html) {
-    return <Error statusCode={404} />;
+  if (!item) {
+    notFound();
   }
 
+  const { type, title, description, images, date } = item;
+  const source = await fs.readFile(`public/assets/md/${type}/${id}.md`, 'utf8');
+
+  if (!source) {
+    notFound();
+  }
+
+  const pictures = new Array(images).fill(0).map((a, i) => ({
+    alt: title,
+    src: `/assets/img/projects/${id}-${i + 1}.jpg`,
+  }));
+
   return (
-    <>
-      <PageMeta title={title} description={description} />
-      {popupIndex !== undefined && (
-        <div
-          onClick={() => setPopupIndex()}
-          onKeyPress={() => setPopupIndex()}
-          role="button"
-          tabIndex="0"
-        >
-          <Overlay>
-            <Image
-              alt={title}
-              src={`/assets/img/projects/${id}-${popupIndex + 1}.jpg`}
-              layout="fill"
-              objectFit="contain"
-              quality={100}
-            />
-          </Overlay>
-        </div>
-      )}
-      <Grid
-        items={[
-          {
-            key: 0,
-            item: (
-              <div>
-                {title && (
-                  <Md>
-                    <h1>{title}</h1>
-                  </Md>
-                )}
-                {html && <MdHighlight innerHTML>{html}</MdHighlight>}
-                {type === 'thoughts' && date && (
-                  <Md>
-                    <p>Posted {format(parseISO(date), 'MMMM do, yyyy')}.</p>
-                  </Md>
-                )}
-              </div>
-            ),
-          },
-          type === 'projects'
-            ? {
-                key: 1,
-                item: (
-                  <div
-                    onClick={onImageListClick}
-                    onKeyPress={onImageListClick}
-                    role="button"
-                    tabIndex="0"
-                    css={styles.images}
-                  >
-                    <ul>
-                      {new Array(images).fill(0).map((a, i) => (
-                        <li key={`${id}-${i + 1}`}>
-                          <Image
-                            alt={title}
-                            src={`/assets/img/projects/${id}-${i + 1}.jpg`}
-                            layout="fill"
-                            objectFit="cover"
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ),
-              }
-            : { key: 1 },
-        ]}
-      />
-    </>
+    <Grid
+      items={[
+        {
+          key: 0,
+          item: (
+            <div className={styles.page}>
+              {title && (
+                <Md>
+                  <h1>{title}</h1>
+                </Md>
+              )}
+              {source && <Md source={source} />}
+              {type === 'thoughts' && date && (
+                <Md>
+                  <p>Posted {format(parseISO(date), 'MMMM do, yyyy')}.</p>
+                </Md>
+              )}
+            </div>
+          ),
+        },
+        type === 'projects'
+          ? {
+              key: 1,
+              item: <Pictures pictures={pictures} height="short" />,
+            }
+          : { key: 1 },
+      ]}
+    />
   );
-};
-
-Item.propTypes = {
-  html: PropTypes.string.isRequired,
-  item: PropTypes.object.isRequired,
-};
-
-export default Item;
+}

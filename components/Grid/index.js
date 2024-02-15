@@ -1,21 +1,13 @@
-import PropTypes from 'prop-types';
-import styles from './styles';
+import styles from './styles.module.scss';
 
-const Grid = ({ items, rootCss }) => (
-  <ul css={[styles.root, rootCss]}>
-    {items.map(({ item, key }) => (
-      <li key={key}>{item}</li>
-    ))}
-  </ul>
-);
-
-Grid.propTypes = {
-  items: PropTypes.array.isRequired,
-  rootCss: PropTypes.object,
-};
-
-Grid.defaultProps = {
-  rootCss: {},
-};
-
-export default Grid;
+export default function Grid({ items, ParentTag = 'ul', ChildTag = 'li' }) {
+  return (
+    <ParentTag className={styles.grid}>
+      {items.map(({ item, key }) => (
+        <ChildTag key={key}>
+          {item}
+        </ChildTag>
+      ))}
+    </ParentTag>
+  );
+}

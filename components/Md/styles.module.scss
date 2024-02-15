@@ -1,0 +1,122 @@
+.md {
+  > *:not(:last-child):not(h1):not(h2):not(h3):not(h4):not(hr) {
+    padding-bottom: var(--spacingHuge);
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(13, 166, 120);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    color: var(--colorBrighter);
+    font-size: var(--fontSizeHuge);
+    font-weight: var(--fontWeightThin);
+    line-height: var(--lineHeightTight);
+    padding-bottom: var(--spacingHuge);
+  }
+
+  h2 {
+    color: var(--colorBrighter);
+    padding-bottom: var(--spacingMini);
+    font-size: var(--fontSizeLarge);
+    font-weight: var(--fontWeightThin);
+    line-height: var(--lineHeightTight);
+  }
+
+  h3 {
+    color: var(--colorBright);
+    padding-bottom: var(--spacingMini);
+    font-size: var(--fontSizeMedium);
+    font-weight: var(--fontWeightBold);
+    line-height: var(--lineHeightDefault);
+  }
+
+  pre {
+    white-space: pre-wrap;
+
+    code {
+      display: block;
+      padding: var(--spacingMedium);
+      overflow-x: auto;
+    }
+  }
+
+  code {
+    vertical-align: middle;
+    padding: var(--spacingMini);
+    margin: 0 var(--spacingMini);
+    background: var(--backgroundLight);
+    color: var(--colorBrighter);
+    font-size: var(--fontSizeSmall);
+
+    ::selection {
+      background: var(--backgroundDark);
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      padding-left: 30px;
+      text-indent: -20px;
+
+      &:before {
+        content: '•';
+        padding-right: 12px;
+      }
+    }
+  }
+
+  ol {
+    padding: 0;
+    padding-left: 30px;
+  }
+
+  hr {
+    height: 1px;
+    background: var(--backgroundLight);
+    border: none;
+    margin-bottom: var(--spacingLarge);
+  }
+
+  blockquote {
+    font-style: italic;
+    font-size: var(--fontSizeHuge);
+    line-height: var(--lineHeightTight);
+    display: inline-block;
+
+    > * {
+      display: inline;
+    }
+    :before {
+      display: inline;
+      content: '“';
+    }
+    :after {
+      display: inline;
+      content: '”';
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @media print {
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: var(--colorPrint);
+    }
+  }
+}

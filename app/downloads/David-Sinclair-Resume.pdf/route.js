@@ -26,6 +26,7 @@ export async function GET() {
   await page.goto(url, { waitUntil: 'networkidle0' });
   const pdf = await page.pdf({
     margin: { top: '20px', right: '20px', bottom: '20px', left: '20px' },
+    scale: 0.8,
   });
   await browser.close();
   return new Response(pdf, { headers: { 'Content-Type': 'application/pdf' } });

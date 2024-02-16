@@ -2,6 +2,9 @@ import puppeteer from 'puppeteer-core';
 import chromium from '@sparticuz/chromium';
 
 export async function GET() {
+  await chromium.font(
+    'https://fonts.gstatic.com/s/archivo/v19/k3kPo8UDI-1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn.woff2',
+  );
   const options =
     process.env.NODE_ENV === 'production'
       ? {

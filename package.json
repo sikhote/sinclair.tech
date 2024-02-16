@@ -9,10 +9,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "pdf": "electron-pdf -p A3 -m 0 -b false https://sinclair.tech/resume public/assets/downloads/David-Sinclair-Resume.pdf"
+    "lint": "next lint"
   },
   "dependencies": {
+    "@sparticuz/chromium": "^121",
     "classnames": "^2",
     "date-fns": "^2",
     "electron-pdf": "^25",
@@ -20,7 +20,7 @@
     "next": "^14",
     "next-mdx-remote": "^4",
     "prettier": "^2",
-    "puppeteer": "^22.0.0",
+    "puppeteer-core": "^22",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1"

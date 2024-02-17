@@ -1,5 +1,10 @@
 import Item from 'components/Item';
 import feed from 'lib/feed';
+import getMetadata from 'lib/getMetaData';
+
+export function generateMetadata({ params }) {
+  return getMetadata('projects', params);
+}
 
 export default Item;
 

@@ -2,6 +2,9 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { parseISO, format } from 'date-fns';
 import Pictures from 'components/Pictures';
+import getMetadata from 'lib/getMetaData';
+
+export const metadata = getMetadata('pictures');
 
 export default async function Page() {
   const picturePaths = await fs.readdir(

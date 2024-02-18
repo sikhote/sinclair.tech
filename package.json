@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@sparticuz/chromium": "^121",
-    "@vercel/analytics": "^1.2.0",
+    "@vercel/analytics": "^1",
     "classnames": "^2",
     "date-fns": "^2",
     "electron-pdf": "^25",

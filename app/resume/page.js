@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import Md from 'components/Md';
 import styles from './styles.module.scss';
-import getMetadata from 'lib/getMetaData';
+import getMetadata from 'lib/getMetadata';
 
 export const metadata = getMetadata('resume');
 

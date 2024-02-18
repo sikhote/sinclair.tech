@@ -1,5 +1,5 @@
 import Feed from 'components/Feed';
-import getMetadata from 'lib/getMetaData';
+import getMetadata from 'lib/getMetadata';
 
 export const metadata = getMetadata('projects');
 

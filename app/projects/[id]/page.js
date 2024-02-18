@@ -1,6 +1,6 @@
 import Item from 'components/Item';
 import feed from 'lib/feed';
-import getMetadata from 'lib/getMetaData';
+import getMetadata from 'lib/getMetadata';
 
 export function generateMetadata({ params }) {
   return getMetadata('projects', params);

@@ -2,7 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { parseISO, format } from 'date-fns';
 import Pictures from 'components/Pictures';
-import getMetadata from 'lib/getMetaData';
+import getMetadata from 'lib/getMetadata';
 
 export const metadata = getMetadata('pictures');
 

@@ -3,7 +3,7 @@ import Nav from 'components/Nav';
 import 'public/assets/fonts/fontello/css/fontello.css';
 import './global.css';
 import styles from './styles.module.scss';
-import getMetadata from 'lib/getMetaData';
+import getMetadata from 'lib/getMetadata';
 
 const fontArchivo = Archivo({ subsets: ['latin'], variable: '--fontArchivo' });
 

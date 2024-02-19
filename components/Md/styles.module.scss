@@ -53,6 +53,7 @@
     background: var(--backgroundLight);
     color: var(--colorBrighter);
     font-size: var(--fontSizeSmall);
+    word-break: break-word;
 
     ::selection {
       background: var(--backgroundDark);

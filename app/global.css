@@ -10,7 +10,7 @@
   --backgroundDark: rgba(0, 0, 0, 0.9);
   --backgroundLight: rgba(255, 255, 255, 0.1);
   --backgroundNav: rgba(20, 20, 20);
-  --selection: rgb(25, 25, 25);
+  --selection: rgba(255, 255, 255, 0.35);
   --fontSizeSmall: 12px;
   --fontSizeDefault: 16px;
   --fontSizeMedium: 18px;
@@ -29,31 +29,15 @@
   --zIndexOverlay: 20;
 }
 
-@property --colorPulse {
-  syntax: '<color>';
-  initial-value: rgb(200, 200, 200);
-  inherits: false;
-}
-
-@property --backgroundPulse {
-  syntax: '<color>';
-  initial-value: rgb(0, 0, 0);
-  inherits: false;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    --backgroundPulse: rgb(0, 26, 25);
-  }
-  25% {
-    --backgroundPulse: rgb(0, 0, 0);
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
   50% {
-    --backgroundPulse: rgb(4, 0, 26);
+    background-position: 100% 50%;
   }
-  75% {
-    --backgroundPulse: rgb(0, 0, 0);
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -64,12 +48,20 @@
 }
 
 body {
+  position: relative;
   font-weight: var(--fontWeightDefault);
   font-size: var(--fontSizeDefault);
   line-height: var(--lineHeightDefault);
   color: var(--colorDefault);
-  background: var(--backgroundPulse);
-  animation: pulse 30s infinite;
+  background: linear-gradient(
+    -45deg,
+    rgb(0, 26, 25),
+    rgb(4, 0, 26),
+    rgb(0, 26, 25),
+    rgb(4, 0, 26)
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 ::selection {

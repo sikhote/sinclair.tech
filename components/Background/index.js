@@ -1,8 +1,8 @@
 import styles from './styles.module.scss';
 
-export default function Stars() {
+export default function Background() {
   return (
-    <div className={styles.stars}>
+    <div className={styles.root}>
       <div className={styles.stars1} />
       <div className={styles.stars2} />
       <div className={styles.stars3} />

@@ -5,7 +5,7 @@ import './global.css';
 import styles from './styles.module.scss';
 import getMetadata from 'lib/getMetadata';
 import { Analytics } from '@vercel/analytics/react';
-import Stars from 'components/Stars';
+import Background from 'components/Background';
 
 const fontArchivo = Archivo({ subsets: ['latin'], variable: '--fontArchivo' });
 
@@ -17,7 +17,7 @@ export default function Layout({ children }) {
       <body className={fontArchivo.className}>
         <Nav />
         <main className={styles.main}>{children}</main>
-        <Stars />
+        <Background />
         <Analytics />
       </body>
     </html>

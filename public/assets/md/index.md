@@ -18,9 +18,9 @@ An important part of my life is my love for the environment. I am doing what I c
 
 ## What I'm Up To
 
-### 2024-02-012
+### 2024-02-12
 
-After being at REI for a few years now and having been through a busy year and then two years of layoffs, I find myself grateful to still have a job. At REI, they are still using Vue in combination with the Java Spring framework. I've become slightly more familiar with the framework and much more fluent in Vue. I never loved the templating syntax and flow of Vue—having worked with it for a while now, my opinions have not changed much. I think Vue's computed properties are a bit easier to understand and the component structure I appreciate, but JSX remains my favorite templating system, because I like how close to regular JavaScript it remains.
+After being at REI for a growth year and then two years of layoffs, I find myself grateful to still have a job. At REI, they are still using Vue in combination with the Spring Java framework. I've become slightly more familiar with Spring and much more fluent in Vue 3 and Typescript. I never loved the templating syntax and flow of Vue—having worked with it for a while now, my opinions have not changed much. I think Vue's computed properties are a bit easier to understand and the component structure I appreciate, but JSX remains my favorite templating system, because I like how close to regular JavaScript it remains.
 
 To keep myself invovled in the front-end development world of React and Next.js, I recently converted my personal website to use the new App Router approach. I am liking the layouts and ease of grabbing backend data from server components and generally appreciate the new structure of the `app` folder, which never quite felt flexible enough in the `pages` model. I have also converted my site to use CSS Modules, rather than sticking with Emotion, a CSS in JS solution. With the updates, I've changed some fonts, styles, and trimmed the selection of pictures.
 

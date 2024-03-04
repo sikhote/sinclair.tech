@@ -31,7 +31,7 @@ export default function Pictures({ pictures, height }) {
               src={popupPicture.src}
               fill
               quality={100}
-              className={styles.popupPicture}
+              className={styles['popup-picture']}
             />
           </Overlay>
         </div>
@@ -39,8 +39,8 @@ export default function Pictures({ pictures, height }) {
       <ul
         className={classNames({
           [styles.images]: true,
-          [styles.imagesTall]: height === 'tall',
-          [styles.imagesShort]: height === 'short',
+          [styles['images-tall']]: height === 'tall',
+          [styles['images-short']]: height === 'short',
         })}
       >
         {pictures.map(({ src, alt, date }, i) => (

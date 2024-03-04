@@ -18,14 +18,14 @@ export default function Feed({ type }) {
                   href={`/${itemType}/${id}`}
                   className={classNames({
                     [styles.link]: true,
-                    [styles.linkThoughts]: type === 'thoughts',
-                    [styles.linkProjects]: type === 'projects',
+                    [styles['link-thoughts']]: type === 'thoughts',
+                    [styles['link-projects']]: type === 'projects',
                   })}
                 >
                   <strong>{title}</strong>
                   {description && <span>{description}</span>}
                   {itemType === 'projects' && (
-                    <div className={styles.imageProject}>
+                    <div className={styles['image-project']}>
                       <Image
                         priority={acc.length === 0}
                         alt={title}

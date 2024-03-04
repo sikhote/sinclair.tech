@@ -22,13 +22,13 @@
       .clearfix {
         *zoom: 1;
       }
-      .clearfix:before,
-      .clearfix:after {
+      .clearfix::before,
+      .clearfix::after {
         display: table;
         content: '';
         line-height: 0;
       }
-      .clearfix:after {
+      .clearfix::after {
         clear: both;
       }
       html {
@@ -83,13 +83,13 @@
         margin-left: -20px;
         *zoom: 1;
       }
-      .row:before,
-      .row:after {
+      .row::before,
+      .row::after {
         display: table;
         content: '';
         line-height: 0;
       }
-      .row:after {
+      .row::after {
         clear: both;
       }
       [class*='span'] {
@@ -148,13 +148,13 @@
         margin-left: auto;
         *zoom: 1;
       }
-      .container:before,
-      .container:after {
+      .container::before,
+      .container::after {
         display: table;
         content: '';
         line-height: 0;
       }
-      .container:after {
+      .container::after {
         clear: both;
       }
       p {

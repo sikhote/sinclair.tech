@@ -1,9 +1,9 @@
 .page {
   > :nth-of-type(n + 3) {
-    padding-top: var(--spacingHuge);
+    padding-top: var(--spacing-huge);
   }
 
-  @media (max-width: 900px) {
-    padding: var(--spacingMedium);
+  @media (width <= 900px) {
+    padding: var(--spacing-medium);
   }
 }

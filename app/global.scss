@@ -1,32 +1,32 @@
 :root {
-  --colorDefault: rgba(255, 255, 255, 0.3);
-  --colorBright: rgba(255, 255, 255, 0.5);
-  --colorBrighter: rgba(255, 255, 255, 0.8);
-  --colorPrint: black;
-  --colorActive: white;
-  --lineHeightDefault: 1.5em;
-  --lineHeightTight: 1.1em;
-  --backgroundPrint: white;
-  --backgroundDark: rgba(0, 0, 0, 0.9);
-  --backgroundLight: rgba(255, 255, 255, 0.1);
-  --backgroundNav: rgba(20, 20, 20);
-  --selection: rgba(255, 255, 255, 0.35);
-  --fontSizeSmall: 12px;
-  --fontSizeDefault: 16px;
-  --fontSizeMedium: 18px;
-  --fontSizeLarge: 24px;
-  --fontSizeHuge: 32px;
-  --fontWeight: 300;
-  --fontWeightThin: 200;
-  --fontWeightBold: 600;
-  --spacingMini: 4px;
-  --spacingSmall: 8px;
-  --spacingMedium: 12px;
-  --spacingLarge: 16px;
-  --spacingHuge: 24px;
-  --spacingPage: 48px;
-  --zIndexNav: 10;
-  --zIndexOverlay: 20;
+  --color-default: rgba(255 255 255 / 30%);
+  --color-bright: rgba(255 255 255 / 50%);
+  --color-brighter: rgba(255 255 255 / 80%);
+  --color-print: black;
+  --color-active: white;
+  --line-height-default: 1.5em;
+  --line-height-tight: 1.1em;
+  --background-print: white;
+  --background-dark: rgba(0 0 0 / 90%);
+  --background-light: rgba(255 255 255 / 10%);
+  --background-nav: rgba(20 20 20);
+  --selection: rgba(255 255 255 / 35%);
+  --font-size-small: 12px;
+  --font-size-default: 16px;
+  --font-size-medium: 18px;
+  --font-size-large: 24px;
+  --font-size-huge: 32px;
+  --font-weight-default: 300;
+  --font-weight-thin: 200;
+  --font-weight-bold: 600;
+  --spacing-mini: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 12px;
+  --spacing-large: 16px;
+  --spacing-huge: 24px;
+  --spacing-page: 48px;
+  --z-index-nav: 10;
+  --z-index-overlay: 20;
 }
 
 * {
@@ -37,11 +37,11 @@
 
 body {
   position: relative;
-  font-weight: var(--fontWeightDefault);
-  font-size: var(--fontSizeDefault);
-  line-height: var(--lineHeightDefault);
-  color: var(--colorDefault);
-  background: var(--backgroundDark);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-default);
+  line-height: var(--line-height-default);
+  color: var(--color-default);
+  background: var(--background-dark);
 }
 
 ::selection {
@@ -50,7 +50,7 @@ body {
 
 @media print {
   body {
-    color: var(--colorPrint);
-    background: var(--backgroundPrint);
+    color: var(--color-print);
+    background: var(--background-print);
   }
 }

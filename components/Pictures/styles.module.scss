@@ -1,17 +1,17 @@
-.popupPicture {
+.popup-picture {
   object-fit: contain;
 }
 
 .images {
   display: flex;
-  gap: var(--spacingHuge);
+  gap: var(--spacing-huge);
   flex-direction: column;
   list-style: none;
   width: 100%;
 
   li {
-    background: var(--backgroundLight);
-    padding: var(--spacingLarge);
+    background: var(--background-light);
+    padding: var(--spacing-large);
     display: flex;
     flex-direction: column;
 
@@ -27,34 +27,34 @@
     }
 
     legend {
-      padding-top: var(--spacingLarge);
+      padding-top: var(--spacing-large);
       display: flex;
       justify-content: space-between;
     }
   }
 
-  @media (max-width: 900px) {
+  @media (width <= 900px) {
     gap: 1px;
 
     li {
-      padding: var(--spacingMedium);
+      padding: var(--spacing-medium);
     }
   }
 }
 
-.imagesTall {
+.images-tall {
   li {
     height: 600px;
   }
 
-  @media (max-width: 900px) {
+  @media (width <= 900px) {
     li {
       height: 300px;
     }
   }
 }
 
-.imagesShort {
+.images-short {
   li {
     height: 300px;
   }

@@ -1,12 +1,12 @@
-.icon-folder:before {
+.icon-folder::before {
   content: '\e800';
 } /* '' */
-.icon-feather:before {
+.icon-feather::before {
   content: '\e801';
 } /* '' */
-.icon-home:before {
+.icon-home::before {
   content: '\e802';
 } /* '' */
-.icon-camera:before {
+.icon-camera::before {
   content: '\e803';
 } /* '' */

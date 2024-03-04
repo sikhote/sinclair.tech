@@ -21,8 +21,8 @@
 }
 */
 
-[class^='icon-']:before,
-[class*=' icon-']:before {
+[class^='icon-']::before,
+[class*=' icon-']::before {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -57,15 +57,15 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-folder:before {
+.icon-folder::before {
   content: '\e800';
 } /* '' */
-.icon-feather:before {
+.icon-feather::before {
   content: '\e801';
 } /* '' */
-.icon-home:before {
+.icon-home::before {
   content: '\e802';
 } /* '' */
-.icon-camera:before {
+.icon-camera::before {
   content: '\e803';
 } /* '' */

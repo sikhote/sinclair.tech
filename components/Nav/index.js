@@ -12,7 +12,7 @@ export default function Nav() {
     <nav
       className={classNames([
         styles.nav,
-        { [styles.navResume]: pathname === '/resume' },
+        { [styles['nav-resume']]: pathname === '/resume' },
       ])}
     >
       {[
@@ -26,7 +26,7 @@ export default function Nav() {
           href={href}
           className={classNames([
             styles.link,
-            { [styles.linkActive]: pathname === href },
+            { [styles['link-active']]: pathname === href },
           ])}
         >
           <i className={`icon-${icon}`} />

@@ -52,7 +52,7 @@ const someStyle = {
 <div style={someStyle} />
 
 // CSS as JS Output
-'&::after': {
+'&:::after': {
   'clear': 'both',
   'content': '',
   'display': 'table'

@@ -1,13 +1,13 @@
 .root {
   > div {
-    padding-right: calc(190px - var(--spacingPage));
+    padding-right: calc(190px - var(--spacing-page));
 
     h1 {
       padding-bottom: 0;
     }
 
     h2 {
-      font-weight: var(--fontWeightThin);
+      font-weight: var(--font-weight-thin);
     }
 
     > ul:nth-of-type(1) > li {
@@ -15,7 +15,7 @@
       text-indent: 0;
     }
 
-    > ul:nth-of-type(1) > li:before {
+    > ul:nth-of-type(1) > li::before {
       display: none;
     }
 
@@ -24,19 +24,19 @@
     }
 
     > h4 + p {
-      padding-bottom: var(--spacingMini) !important;
+      padding-bottom: var(--spacing-mini) !important;
     }
 
     > h2:last-of-type {
-      padding-top: calc(var(--spacingHuge) - var(--spacingMini));
+      padding-top: calc(var(--spacing-huge) - var(--spacing-mini));
     }
 
-    @media (max-width: 900px) {
-      padding: var(--spacingMedium);
+    @media (width <= 900px) {
+      padding: var(--spacing-medium);
       margin-bottom: -64px;
     }
 
-    @media (max-width: 600px) {
+    @media (width <= 600px) {
       > ul:nth-of-type(2) {
         column-count: 3 !important;
       }

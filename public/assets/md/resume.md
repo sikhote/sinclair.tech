@@ -11,31 +11,48 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 ## Knowledge
 
 - [Amazon Web Services (AWS)](https://aws.amazon.com/)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Sass](https://sass-lang.com/), & [Styled Components](https://github.com/styled-components/styled-components)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Docker](https://www.docker.com/)
+- [Express](https://expressjs.com/)
 - [Git](https://git-scm.com/)
-- [Jest](https://jestjs.io/) & [Nightwatch](http://nightwatchjs.org/)
+- [JavaScript](https://www.javascript.com/)
+- [Jest](https://jestjs.io/)
 - [Linux](https://www.linux.org/)
 - [Next](https://nextjs.org)
-- [Node](https://nodejs.org) & [Express](https://expressjs.com/)
-- [NPM](https://www.npmjs.com/) & [Yarn](https://yarnpkg.com/)
-- [React](https://reactjs.org) & [React Native](https://facebook.github.io/react-native/)
+- [Node](https://nodejs.org)
+- [NPM](https://www.npmjs.com/)
+- [Puppeteer](https://pptr.dev/)
+- [React](https://reactjs.org)
+- [React Native](https://facebook.github.io/react-native/)
 - [Redux](https://redux.js.org/)
-- [JavaScript](https://www.javascript.com/) & [TypeScript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Vercel](https://vercel.com/)
 - [Vite](https://vitejs.dev/)
 - [Vue](https://vuejs.org/)
 - [Webpack](https://webpack.js.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Zustand](https://github.com/pmndrs/zustand)
 
 ## Experience
 
 ### Senior Front-End Engineer at [REI Co-Op](https://rei.com)
 
-#### 2021–Present · Remote
+#### 2024–Present · Cedar Team · Remote
 
+- Maintained a component library with enhancements and additions
+- Created a base layer for all action-based components to increase accessibility and brand consistency
+- Worked with project owners and development teams to increase efficiency by finding solutions to practical engineering needs
+- Advocated and helped find company-wide patterns for working with content within the CMS
+- Reduced development and content creation costs while increasing brand consistency across landing pages
+
+#### 2021–2024 · Experiences Team · Remote
+
+- Created a block component system that worked with the existing CMS for allowing faster and more compliant content creation
+- Helped onboard new software developers
+- Led development for targetted landing pages for new brands and campaigns
 - Upgraded all components in various microsites to meet ARIA compliance and reach brand alignment
-- Helped developed the UI for a new checkout UI that upgraded a half a decade old experience
-- Created a new component system that worked with the existing CMS for allowing faster and more compliant content creation
+- Helped develop the UI for a new checkout experience that upgraded a half a decade old design
 
 ### Senior Engineer at [Veyl Ventures](https://veyl.com)
 
@@ -48,17 +65,15 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - Created an automated return portal to reduce CX contact
 - Added i18n functionality across sales and checkout pages
 
-### Senior Engineer (FTE) at [Guild Mortgage](https://guildmortgage.com)
+### Senior Engineer at [Guild Mortgage](https://guildmortgage.com)
 
-#### 2019–2021 · Remote
+#### 2019–2021 · FTE · Remote
 
 - Upgraded React Native phone application to use the latest versions of all dependencies, providing a platform for future releases and allowing automated build scripts.
 - Created and maintained automated end-2-end tests, unit tests, and API tests for all JavaScript projects. These tests were used to ensure code quality and functionality requirements before code reviews and QA testing, increasing team efficiency.
 - Integrated React components as part of transitioning an older PHP website into an API driven single page application. This allowed new designs and functionality to be implemented progressively without negatively impacting the user.
 
-### Senior Engineer (Contractor) at [Guild Mortgage](https://guildmortgage.com)
-
-#### 2018–2019 · San Diego, CA
+#### 2018–2019 · Contractor · San Diego, CA
 
 - With a small team, built and submitted to Apple App Store a React Native mobile application that allows sales agents to support client needs. The application was designed and styled for iOS and Android devices. As a senior member of the team, I also took the lead on technology and implementation decisions and code reviews.
 - Created boilerplates for multiple projects and led technology choices within the React ecosystem.

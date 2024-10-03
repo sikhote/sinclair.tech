@@ -10,6 +10,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 ## Knowledge
 
+- [Agile](https://en.wikipedia.org/wiki/Agile_software_development)
 - [Amazon Web Services (AWS)](https://aws.amazon.com/)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Docker](https://www.docker.com/)
@@ -40,19 +41,21 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 #### 2024–Present · Cedar Team · Remote
 
-- Maintained a component library with enhancements and additions
-- Created a base layer for all action-based components to increase accessibility and brand consistency
+- Planned and executed successful releases for one of the most widely used tools at the Co-Op
+- Maintained a component library used by web and mobile platform teams
+- Collaborated with teams to bring new components into a shared library, saving design, development, and maintenance time within the Co-Op
+- Developed a base layer for all action-based components to increase accessibility and UX consistency
 - Worked with project owners and development teams to increase efficiency by finding solutions to practical engineering needs
 - Advocated and helped find company-wide patterns for working with content within the CMS
 - Reduced development and content creation costs while increasing brand consistency across landing pages
 
 #### 2021–2024 · Experiences Team · Remote
 
-- Created a block component system that worked with the existing CMS for allowing faster and more compliant content creation
+- Created a block component system that worked with an existing CMS for allowing faster and more compliant content creation
 - Helped onboard new software developers
 - Led development for targetted landing pages for new brands and campaigns
 - Upgraded all components in various microsites to meet ARIA compliance and reach brand alignment
-- Helped develop the UI for a new checkout experience that upgraded a half a decade old design
+- Helped develop the UI for a new checkout experience that upgraded a half decade old design
 
 ### Senior Engineer at [Veyl Ventures](https://veyl.com)
 

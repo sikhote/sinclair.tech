@@ -12,7 +12,7 @@ export default function Nav() {
     <nav
       className={classNames([
         styles.nav,
-        { [styles['nav-resume']]: pathname === '/resume' },
+        { [styles['nav-hidden']]: ['/resume', '/landing'].includes(pathname) },
       ])}
     >
       {[

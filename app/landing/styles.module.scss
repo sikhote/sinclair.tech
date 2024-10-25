@@ -28,6 +28,11 @@
         align-items: center;
         color: var(--color-default);
         text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: rgb(13 166 120);
+        }
       }
     }
   }
@@ -64,6 +69,11 @@
           a {
             color: var(--color-default);
             text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+              color: rgb(13 166 120);
+            }
           }
 
           &::before {

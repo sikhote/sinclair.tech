@@ -32,12 +32,11 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - [Vite](https://vitejs.dev/)
 - [Vue](https://vuejs.org/)
 - [Webpack](https://webpack.js.org/)
-- [Yarn](https://yarnpkg.com/)
 - [Zustand](https://github.com/pmndrs/zustand)
 
 ## Experience
 
-### Senior Front-End Engineer at [REI Co-Op](https://rei.com)
+### Senior Frontend Engineer at [REI Co-Op](https://rei.com)
 
 #### 2024–Present · Cedar Team · Remote
 
@@ -57,18 +56,18 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - Upgraded all components in various microsites to meet ARIA compliance and reach brand alignment
 - Helped develop the UI for a new checkout experience that upgraded a half decade old design
 
-### Senior Engineer at [Veyl Ventures](https://veyl.com)
+### Lead Frontend Engineer at [Veyl Ventures](https://veyl.com)
 
 #### 2021 · Remote
 
 - Built universal checkout page using Next.js (React) that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design
 - Created server side rendered, react, e-commerce websites for brands of the company
-- Created optimized landing pages for sales
-- Team lead for all React developmemt and front-end best practices
+- Created optimized landing pages for sales events
+- Team lead for all React developmemt and frontend best practices
 - Created an automated return portal to reduce CX contact
 - Added i18n functionality across sales and checkout pages
 
-### Senior Engineer at [Guild Mortgage](https://guildmortgage.com)
+### Lead Frontend Engineer at [Guild Mortgage](https://guildmortgage.com)
 
 #### 2019–2021 · FTE · Remote
 
@@ -80,21 +79,19 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 - With a small team, built and submitted to Apple App Store a React Native mobile application that allows sales agents to support client needs. The application was designed and styled for iOS and Android devices. As a senior member of the team, I also took the lead on technology and implementation decisions and code reviews.
 - Created boilerplates for multiple projects and led technology choices within the React ecosystem.
-- Led a team of three to create a single page application for uploading documents using [React Native Web](https://github.com/necolas/react-native-web) (for some cross-platform components).
+- Led a team of three to create a single page application for uploading documents using React Native Web (for some cross-platform components).
 
 ### JavaScript Engineer at [Sony Electronics](http://www.sony.com/en_us/SCA)
 
 #### 2016–2018 · Rancho Bernardo, CA
 
-- Helped develop front end and back end features for a content manager that customers work with directly to produce phone applications used by college students and large events. The UI was built with Webpack, React, Redux. The APIs utilized AWS Lamda, Cognito, Dynamo, CloudWatch, and Google Firebase.
+- Helped develop frontend and backend features for a content manager that customers work with directly to produce phone applications used by college students and large events. The UI was built with Webpack, React, Redux. The APIs utilized AWS Lamda, Cognito, Dynamo, CloudWatch, and Google Firebase.
 - Successfully allowed golf swings, recorded on Android devices, to be analyzed by machine learning scripts. This was accomplished by building a Node API for transferring data from the device to AWS, a React Native phone application for Android devices, and coordinating with team members that placed code onto an AWS EC2 Instance. The phone application worked on tablets and phones by recording a swing of a video, sending the video and human profile to the Node API, and executing a python script with supplied data.
 - Helped build and ship an interactive WebGL game for the 2018 SXSW event in Texas, in a very short time span. The game imported 3D models, rendered them on a projector, allowed players to interact with the models, had sound effects, and turned out to be a huge success. Babylon.js, Webpack, React, Electron, and Node technologies allowed the game to work on any computer.
-- Fixed bugs and helped maintain [Play Memories Online](https://playmemoriesonline.com).
 - Prototyped a working Tennis Challenge mobile application in three weeks with more functionality than requested. The prototype was used for a successful live demonstration to a tennis school in Japan. The application was built using React, Redux, AWS, Webpack, and Express.
-- Maintained a widely used, company built, Yeoman generator boilerplate. Added functionality in free time to allow TypeScript 2, Webpack, and Yarn as options within the generator. The generator also utilized React, Redux, Express, Sass, Less, and Browserify. Fixed errors within generator for open source release.
 - Researched and presented front and back end technologies for implementing into future projects. Topics included: AWS Lambda scaling, the Serverless Framework and alternatives, React Native integration, React International, and Fela CSS.
 
-### Front End Engineer at [Pathway Genomics](http://pathway.com)
+### Frontend Engineer at [Pathway Genomics](http://pathway.com)
 
 #### 2015–2016 · San Diego, CA
 

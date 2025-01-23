@@ -52,7 +52,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 
 - Created a block component system that worked with an existing CMS for allowing faster and more compliant content creation
 - Helped onboard new software developers
-- Led development for targetted landing pages for new brands and campaigns
+- Led development for targeted landing pages for new brands and campaigns
 - Upgraded all components in various microsites to meet ARIA compliance and reach brand alignment
 - Helped develop the UI for a new checkout experience that upgraded a half decade old design
 
@@ -63,7 +63,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - Built universal checkout page using Next.js (React) that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design
 - Created server side rendered, react, e-commerce websites for brands of the company
 - Created optimized landing pages for sales events
-- Team lead for all React developmemt and frontend best practices
+- Team lead for all React development and frontend best practices
 - Created an automated return portal to reduce CX contact
 - Added i18n functionality across sales and checkout pages
 
@@ -98,7 +98,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 Led and contributed to a variety of engineering projects that affected both front and back end web applications. Specialized in building JavaScript-based prototypes of the OME health app.
 
 - Built and designed a highly successful interactive iPad web demo of OME, a health app, for the company to demonstrate at various IBM events. Demo gained public interest and generated outside investments. Backbone JS was used as a framework for managing routes, Underscore for rendering templates, and code bundling with Browserify.
-- Built and designed a working prototype of the OME health app in the form of a responsive web app. The prototype was a major success in helping the API team work out bugs, displaying functionality to upper management, allowing a smoother API hand-off to the iOS app developers, and allowing team leaders to adjust engineering efforts to what investors were most interested in. The prototype utilized real data had an authentication piece and incorporated geo-location. The prototype was built using ES6, React, Flux, Sass styling, and Webpack for bundling. The web application was responsive and targeted all devices.
+- Built and designed a working prototype of the OME health app in the form of a responsive web app. The prototype was a major success in helping the API team work out bugs, displaying functionality to upper management, allowing a smoother API hand-off to the iOS app developers, and allowing team leaders to adjust engineering efforts to what investors were most interested in. The prototype utilized real data had an authentication piece and incorporated geolocation. The prototype was built using ES6, React, Flux, Sass styling, and Webpack for bundling. The web application was responsive and targeted all devices.
 - Solved issues and contributed to the OME health app team. Developed and documented Node API endpoints for the OME app, which connected to a RabbitMQ service for authentication. Fixed Objective-C and Java security and encryption issues the iOS app and QA teams encountered.
 - Contributed to the general engineering team by creating APIs based on json:api specifications, developing new Angular JS pages, and modernizing frequently used tools.
 

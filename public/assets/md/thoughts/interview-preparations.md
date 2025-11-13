@@ -1,6 +1,8 @@
+Here are all the notes I wrote down in preparation for interviewing with Apple, Service Now, and Qualcomm. I only ended with an offer from Apple that I accepted. Along the way, I learned how having a catalog of examples to talk about was helpful. Practicing speaking about the examples also helped. The hardest part of all interviews, for me, was the leet-code style questions, because my brain tires and sometimes gets into a stuck place. The good part is, if you are friendly, speak slowly, and work well with your interviewer, there is a good chance they will reciprocate with kindness.
+
 ## Leadership examples
 
-Aspects to keep in mind
+### Aspects to keep in mind
 
 - Speak to complexity of larger projects
 - Refer to times of project ownership
@@ -21,7 +23,7 @@ Aspects to keep in mind
 ### Creating a checkout experience at Veyl
 
 - Architecting deployment patterns for multiple domains
-- Preseting approaches to CTO and the proposed solution
+- Presenting approaches to CTO and the proposed solution
 - Owner of project, all major features, and all bugs
 - Guided two other developers to contribute
 - Created detailed documentation for future developers
@@ -31,7 +33,7 @@ Aspects to keep in mind
 - After onboarding into the project, revamped state management within the app
 - Created reusable components and championed the initiative within the team
 
-### Architected the Customer Portal at Guild Mortage
+### Architected the Customer Portal at Guild Mortgage
 
 - Created a deployment pipeline
 - Developed an integration and migration strategy
@@ -44,12 +46,12 @@ Aspects to keep in mind
 - Very little design direction and storyboarding
 - Needed to architect supporting multiple brands with a single deployment
 - Many UX decisions were made at development time
-- Many feature requests, but with little requirements
+- Many feature requests, but with few requirements
 
 ### Working outside of my role: Guild Mortgage
 
-- Lots of frontend mentoring for coworkers on projects I was not invovled in
-- Setup CI development pipelines
+- Lots of frontend mentoring for coworkers on projects I was not involved in
+- Set up CI development pipelines
 - Architected data integration of React development with legacy PHP websites
 - Created React boilerplate templates for internal teams
 
@@ -58,18 +60,18 @@ Aspects to keep in mind
 - The level of standards Apple holds aligns with my own values
 - I appreciate that with Apple products and solutions, you know it will be of quality
 - I generally prefer fewer products, but of high quality and thought
-- Eager to contribute and test my skills and leadership with talented people that are also kind and motivated
+- Eager to contribute and test my skills and leadership with talented people who are also kind and motivated
 
 ### Analytical thinking: Component library creation at REI
 
-- Decided how a layout component would work by analyzing all currnet uses cases and creating a solution for most
+- Decided how a layout component would work by analyzing all current use cases and creating a solution for most
 - Lots of decisions about which features to include and how they would relate to future components
 - Decisions would impact frontend development for all teams at REI
 
 ### Why I fit the role
 
 - Strong UX background, familiar with common website patterns, user behavior, know how to make an accessible website, and I am highly collaborative
-- Great at debugging and working through complex issues can come up with both internal and external services
+- Great at debugging and working through complex issues that can come up with both internal and external services
 - Motivated, proactive, and can usually find ways to support and help a project proceed and succeed
 - Strong listening skills for both technical discussions and planning development
 
@@ -85,9 +87,9 @@ Aspects to keep in mind
 ### Innovation: Checkout page
 
 - Created a way, based on the URL, to output a different version of a checkout app
-- Each brand had it's own URL, but all URLs pointed to the same deployment
+- Each brand had its own URL, but all URLs pointed to the same deployment
 
-### Problem solving: supporting teams at REI
+### Problem-solving: Supporting teams at REI
 
 - I was the main point of contact for the component library that all frontend developers relied on
 - My process was to first listen, then to replicate the issue and context of any problems
@@ -118,19 +120,20 @@ Aspects to keep in mind
 - Note the time and memory complexity
 
 4. Optimize
-- Sometimes just talk brute force
+
+- Sometimes, just talk brute force
 - Most time here
 
 5. Walk through algorithm
 
 - Walk through before writing code
-- Make sure you know you're doing before starting to code
+- Make sure you know what you're doing before starting to code
 
 6. Write code
 
 - Might not need to actually execute code
 - They want to know your thought process
-- Make it as bug free as possible
+- Make it as bug-free as possible
 
 7. Verification
 
@@ -141,57 +144,69 @@ Aspects to keep in mind
 ## Leet code patterns
 
 ### Binary search
-- Works when data is sorted, divide in half recusrively
+
+- Works when data is sorted, divide in half recursively
 - Prefix sum: save time with precalculated values
 - Examples: 303, 325, 560
 
 ### Two pointers
+
 - Pointers start at ends or middle, meet or disperse
 - Examples: 167, 15, 11
 
 ### Sliding window
+
 - When a max length is given and working with array
 - Examples: 643, 3, 76
 
 ### Fast and slow pointers
+
 - Check if linked list has a cycle
 - The two pointers will meet if something is a cycle
 - Examples: 141, 202, 287
 
 ### Rearranging a link list
+
 - Do it in place with a previous, current, and next pointers
 - Examples: 206, 92, 24
 
 ### Monotonic stack
+
 - Finding next greater or next smallest in array
 - Use a new stack array to track indexes
 - Examples: 496, 739, 84
 
 ### Top K elements
+
 - Use a min heap of size K
 - Examples: 215, 347, 373
 
 ### Overlapping intervals
+
 - Sort by start time
 - Go one by one to new
 - Examples: 561, 57, 435
 
 ### Modified binary search
+
 - Find sorted parts
 - Sort each half
 - Examples: 33, 153, 240
 
 ### Binary tree reversal
+
 - Left to right, right to left, at each level
 - Examples: 257, 230, 124, 107
 
 ### Depth first search (DFS)
+
 - Keep track of visited nodes
 - Perform operation on current node
 - Explore unvisited neighbors
 - Examples: 133, 131, 210
 
 ### Breadth first search (BFS)
+
 - Level by level
 - Shortest path between two nodes
 - Transforming words
@@ -200,14 +215,95 @@ Aspects to keep in mind
 - Examples: 102, 994, 127
 
 ### Matrix reversal
+
 - Use DFS/BFS
 - Find shortest path in grid
 - Examples: 733, 200, 130
 
 ### Backtracking
+
 - Generating permutations
 - Include and element or not, go to next, then in reverse
 - Examples: 46, 78, 51, 17
 
 ### Dynamic programming
+
 - Examples: 70, 322, 1143, 300, 416, 312
+
+## System design
+
+### Understand problem and establish scope (5min)
+
+- Ask questions to understand
+- Clarify requirements & features
+- Who are users?
+- Agree on some features to focus on
+- Understand how large/scale we need to handle
+- Make rough estimates of scale
+
+### Propose high level design and get buy-in (20min)
+
+- Agreement with interviewer on design
+- Top-down approach and start with APIs
+- APIs are contract with client and BEs
+- Decide on using REST or GraphQL
+- Define input and output of APIs
+- Verify that APIs will satisfy functional requirements
+- No APIs unrelated to functionality we don't need
+- If lots of communication between client and server, websocket could be used, but it is hard to scale
+
+### High level design diagram (15mins)
+
+- Blueprint of how all APIs and DBs work together
+- Verify diagram satisfies all requirements
+- Possibly use a load balancer and API gateway
+- Introduce the DB layer
+- Include all major features
+- For later: Discuss DB scaling, concurrency, failure, redis
+- Data model and schema: Consider read/write ratios
+- Discuss which kind of DB to use and indexing options (Solr)
+
+### Wrap up (5min)
+
+- Optimizations, summary
+- Possibly add: Sharding for large DBs, load balancer for heavy reads, multiple DBs, a read-only DB, geolocations, cached data
+- AWS related services: Cloudfront or Akamai to cache files, Dynamo for NoSQL, RDS for MySQL, Elastic Load Balancer, S3, EC2, Elasticache (Redis)
+
+## Negotiations
+
+### Things to ask for
+
+- If looking for a match, ask: Can you match this amount? Do not tell the company name
+- Don't ask more than a company will go to
+- Ask over the phone
+- Wait for a full offer if possible
+- Other things in a package can increase value
+- WFH setup upgrades as bonus
+- Vacation days can be negotiated
+- Ask about conferences or professional development support, maybe courses
+
+### During the process
+
+- Stay likable throughout the process
+- Have reasons for all asks
+- Make it clear you are very interested and attainable
+- Understand who exactly you are negotiating with
+- Understand the hard constraints on their end
+- Prepare for their tough questions
+- Keep in mind their intent in questions
+- Consider the entirety of an offer, not just salary
+- Share all of your "asks" upfront
+- Do not haggle just to do it
+- Timing other offers can be important
+- Avoid ultimatums
+- Remember, they do want to hire you
+- Keep in mind that constraints can change
+- Keep perspective on the entire situation
+
+### Preparation and during
+
+- Know your value: Research, consider past positions, think about your future
+- Start with a baseline: Where you want to start and your stretch goal
+- Practice talking points: Strategize, rehearse
+- Take time: Request time, ask for a deadline
+- Don't value yourself too low to avoid ruffling feathers

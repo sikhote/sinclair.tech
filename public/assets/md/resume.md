@@ -61,6 +61,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 #### 2021 · Remote
 
 - Built universal checkout page using Next.js (React) that supported multiple brands and domains with a single code base. It was feature rich, including options for upsells, coupons, and language support, while still allowing brand specific themes and design
+- Checkout page handled 100M+ daily users, tens of thousands of daily transactions, and serviced hundreds of thousands of subscription plans. In direct split tests against Shopify, the custom app consistently achieved higher conversion rates at lower acquisition costs. I'm proud of the team and technology we built.
 - Created server side rendered, react, e-commerce websites for brands of the company
 - Created optimized landing pages for sales events
 - Team lead for all React development and frontend best practices

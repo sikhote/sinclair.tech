@@ -1,18 +1,20 @@
 import classnames from 'classnames';
-import { bar, categories } from 'lib/landing';
+import { bar1, bar2, categories } from 'lib/landing';
 import styles from './styles.module.scss';
 
 const Home = () => {
   return (
     <main>
       <section className={styles.bar}>
-        <ul>
-          {bar.map(({ title, url }) => (
-            <li key={title}>
-              <a href={url}>{title}</a>
-            </li>
-          ))}
-        </ul>
+        {[bar1, bar2].map((bar, i) => (
+          <ul key={i}>
+            {bar.map(({ title, url }) => (
+              <li key={title}>
+                <a href={url}>{title}</a>
+              </li>
+            ))}
+          </ul>
+        ))}
       </section>
       <section className={styles.all}>
         <ul>

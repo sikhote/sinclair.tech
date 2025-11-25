@@ -2,8 +2,13 @@ import Item from 'components/Item';
 import feed from 'lib/feed';
 import getMetadata from 'lib/getMetadata';
 
-export function generateMetadata({ params }) {
-  return getMetadata('projects', params);
+export type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const pageParams = await params;
+  return getMetadata('projects', pageParams);
 }
 
 export default Item;

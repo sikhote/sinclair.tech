@@ -5,18 +5,26 @@ export async function GET() {
   await chromium.font(
     'https://fonts.gstatic.com/s/archivo/v19/k3kPo8UDI-1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn.woff2',
   );
+
   const options =
     process.platform === 'darwin'
       ? {
-          headless: 'new',
+          headless: false,
           executablePath:
             '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
         }
       : {
           args: chromium.args,
-          defaultViewport: chromium.defaultViewport,
+          defaultViewport: {
+            deviceScaleFactor: 1,
+            hasTouch: false,
+            height: 1080,
+            isLandscape: true,
+            isMobile: false,
+            width: 1920,
+          },
           executablePath: await chromium.executablePath(),
-          headless: 'new',
+          headless: false,
           ignoreHTTPSErrors: true,
         };
   const browser = await puppeteer.launch(options);
@@ -29,5 +37,6 @@ export async function GET() {
     scale: 0.8,
   });
   await browser.close();
+  // @ts-expect-error buffer
   return new Response(pdf, { headers: { 'Content-Type': 'application/pdf' } });
 }

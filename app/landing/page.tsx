@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import { bar1, bar2, categories } from 'lib/landing';
 import styles from './styles.module.scss';
 

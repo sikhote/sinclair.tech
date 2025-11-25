@@ -9,8 +9,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "stylelint '**/*.scss' && next lint && prettier --check .",
-    "fix": "stylelint '**/*.scss' --fix && next lint --fix && prettier --write ."
+    "lint": "next typegen && stylelint '**/*.scss' && eslint . && prettier --check . && tsc --noEmit",
+    "fix": "next typegen && stylelint '**/*.scss' --fix && eslint --fix && prettier --write . && tsc --noEmit"
   },
   "dependencies": {
     "@sparticuz/chromium": "^141",
@@ -26,11 +26,15 @@
     "sass": "^1"
   },
   "devDependencies": {
+    "@eslint-react/eslint-plugin": "^2",
+    "@eslint/js": "^9",
     "eslint": "^9",
     "eslint-config-next": "^16",
     "eslint-config-prettier": "^10",
     "prettier": "^3",
     "stylelint": "^16",
-    "stylelint-config-standard-scss": "^16"
+    "stylelint-config-standard-scss": "^16",
+    "typescript": "^5",
+    "typescript-eslint": "^8"
   }
 }

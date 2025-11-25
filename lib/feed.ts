@@ -1,4 +1,6 @@
-const feed = [
+import type { Item } from 'lib/types';
+
+const feed: Item[] = [
   {
     type: 'thoughts',
     id: 'interview-preparations',

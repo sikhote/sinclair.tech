@@ -18,7 +18,11 @@ export const viewport = {
   userScalable: false,
 };
 
-export default function Layout({ children }) {
+export interface Props {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: Props) {
   return (
     <html lang="en">
       <body className={fontArchivo.className}>

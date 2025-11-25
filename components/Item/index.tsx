@@ -7,15 +7,19 @@ import { promises as fs } from 'fs';
 import { notFound } from 'next/navigation';
 import styles from './styles.module.scss';
 
-export default async function Item({ params }) {
-  const { id } = params;
+export type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export default async function Item({ params }: Props) {
+  const { id } = await params;
   const item = feed.find((i) => i.id === id);
 
   if (!item) {
     notFound();
   }
 
-  const { type, title, description, images, date } = item;
+  const { type, title, images, date } = item;
   const source = await fs.readFile(`public/assets/md/${type}/${id}.md`, 'utf8');
 
   if (!source) {

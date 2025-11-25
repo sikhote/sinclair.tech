@@ -1,6 +1,7 @@
 import feed from 'lib/feed';
+import type { UnknownObject } from 'lib/types';
 
-export default function getMetadata(page, params) {
+export default function getMetadata(page?: string, params?: UnknownObject) {
   const divider = ' · ';
   const name = 'David Sinclair';
   let description = `Personal website of ${name}`;
@@ -18,11 +19,13 @@ export default function getMetadata(page, params) {
       title = item
         ? `${item.title}${divider}${name}`
         : `Projects${divider}${name}`;
+      description = item?.description || description;
       break;
     case 'thoughts':
       title = item
         ? `${item.title}${divider}${name}`
         : `Thoughts${divider}${name}`;
+      description = item?.description || description;
       break;
   }
 

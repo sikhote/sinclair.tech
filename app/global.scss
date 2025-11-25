@@ -1,16 +1,16 @@
 :root {
-  --color-default: rgba(255 255 255 / 30%);
-  --color-bright: rgba(255 255 255 / 50%);
-  --color-brighter: rgba(255 255 255 / 80%);
+  --color-default: rgb(255 255 255 / 30%);
+  --color-bright: rgb(255 255 255 / 50%);
+  --color-brighter: rgb(255 255 255 / 80%);
   --color-print: black;
   --color-active: white;
   --line-height-default: 1.5em;
   --line-height-tight: 1.1em;
   --background-print: white;
-  --background-dark: rgba(0 0 0 / 90%);
-  --background-light: rgba(255 255 255 / 10%);
-  --background-nav: rgba(20 20 20);
-  --selection: rgba(255 255 255 / 35%);
+  --background-dark: rgb(0 0 0 / 90%);
+  --background-light: rgb(255 255 255 / 10%);
+  --background-nav: rgb(20 20 20);
+  --selection: rgb(255 255 255 / 35%);
   --font-size-small: 12px;
   --font-size-default: 16px;
   --font-size-medium: 18px;

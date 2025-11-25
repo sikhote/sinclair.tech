@@ -11,7 +11,19 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run lint
-      - name: 'notify vercel'
-        uses: 'vercel/repository-dispatch/actions/status@v1'
+      - name: Set Vercel Deployment Check Status
+        if: success()
+        uses: vercel/repository-dispatch/actions/status@v1
         with:
-          name: Vercel - sinclairtech: checks
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sha: ${{ github.sha }}
+          status: success
+          check_name: checks
+      - name: Set Vercel Deployment Check Status (Failure)
+        if: failure()
+        uses: vercel/repository-dispatch/actions/status@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sha: ${{ github.sha }}
+          status: failure
+          check_name: checks

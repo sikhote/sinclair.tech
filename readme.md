@@ -2,4 +2,4 @@
 
 # [sinclair.tech](https://sinclair.tech)
 
-Personal website of David Sinclair
+Personal website of David Sinclair.

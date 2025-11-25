@@ -9,7 +9,7 @@ export async function GET() {
   const options =
     process.platform === 'darwin'
       ? {
-          headless: false,
+          headless: true,
           executablePath:
             '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
         }
@@ -24,7 +24,7 @@ export async function GET() {
             width: 1920,
           },
           executablePath: await chromium.executablePath(),
-          headless: false,
+          headless: true,
           ignoreHTTPSErrors: true,
         };
   const browser = await puppeteer.launch(options);

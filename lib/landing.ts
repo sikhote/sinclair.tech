@@ -42,6 +42,7 @@ export const bar1 = [
 ];
 
 export const bar2 = [
+  'starladder_cs_highlights',
   'LinusTechTips',
   'GothamChess',
   'Wooting',

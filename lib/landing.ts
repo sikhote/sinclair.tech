@@ -65,6 +65,7 @@ export const bar2 = [
   'optimumtech',
   'RocketJumpNinja',
 ]
+  .map((s) => s.toLowerCase())
   .sort()
   .map((s) => ({
     title: s.slice(0, 2),

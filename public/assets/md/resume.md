@@ -16,6 +16,7 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - [Docker](https://www.docker.com/)
 - [Express](https://expressjs.com/)
 - [Git](https://git-scm.com/)
+- [GraphQL](https://graphql.org/)
 - [JavaScript](https://www.javascript.com/)
 - [Jest](https://jestjs.io/)
 - [Linux](https://www.linux.org/)
@@ -25,20 +26,25 @@ I am a developer with a passion to learn and contribute. I have recent experienc
 - [Puppeteer](https://pptr.dev/)
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
-- [Redux](https://redux.js.org/)
 - [Sass](https://sass-lang.com/)
+- [Svelte](https://svelte.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vercel](https://vercel.com/)
 - [Vite](https://vitejs.dev/)
 - [Vue](https://vuejs.org/)
 - [Webpack](https://webpack.js.org/)
-- [Zustand](https://github.com/pmndrs/zustand)
 
 ## Experience
 
+### Senior Full Stack Software Engineer at [Apple](https://apple.com)
+
+#### 2025–Present · San Diego, CA
+
+- Creating internal tools for Apple TV related to enhancing internal websites for editors
+
 ### Senior Frontend Engineer at [REI Co-Op](https://rei.com)
 
-#### 2024–Present · Cedar Team · Remote
+#### 2024–2025 · Cedar Team · Remote
 
 - Planned and executed successful releases for one of the most widely used tools at the Co-Op
 - Maintained a component library used by web and mobile platform teams

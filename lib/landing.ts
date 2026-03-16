@@ -126,8 +126,8 @@ export const categories = [
     title: 'Media',
     items: [
       {
-        title: "Live TV",
-        url: "https://thetvapp.to/",
+        title: 'Live TV',
+        url: 'https://thetvapp.to/',
       },
       {
         title: 'TV shows',

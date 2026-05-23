@@ -130,6 +130,10 @@ export const categories = [
         url: 'https://thetvapp.to/',
       },
       {
+        title: 'Live TV 2',
+        url: 'https://dlhd.pk/24-7-channels.php',
+      },
+      {
         title: 'TV shows',
         url: 'https://topsrs.day/',
       },
@@ -139,11 +143,11 @@ export const categories = [
       },
       {
         title: 'Stream East',
-        url: 'https://the.streameast.app/v78',
+        url: 'https://streamseast.cc/soccer',
       },
       {
         title: 'Totalsportek',
-        url: 'https://totalsportek.army/',
+        url: 'https://totalsportekz.com/',
       },
       {
         title: 'Flixmomo',

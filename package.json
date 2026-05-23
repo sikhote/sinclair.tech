@@ -19,7 +19,7 @@
     "date-fns": "^2",
     "lodash": "^4",
     "next": "^16",
-    "next-mdx-remote": "^5",
+    "next-mdx-remote": "^6",
     "puppeteer-core": "^24",
     "react": "^19",
     "react-dom": "^19",

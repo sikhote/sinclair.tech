@@ -20,16 +20,12 @@ export const bar1 = [
     url: 'http://jezebel.com/latest',
   },
   {
-    title: 'P',
-    url: 'https://app.plex.tv/',
+    title: 'JF',
+    url: 'http://jelly.sinclair.tech',
   },
   {
-    title: 'RE',
-    url: 'https://www.reddit.com/r/ebikes/',
-  },
-  {
-    title: 'RO',
-    url: 'https://www.reddit.com/r/OLED_Gaming/',
+    title: 'R',
+    url: 'https://www.reddit.com',
   },
   {
     title: 'W',
